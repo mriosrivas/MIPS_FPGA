@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_boot_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench_boot" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="100304748000fs"></ZoomStartTime>
+      <ZoomEndTime time="100382736701fs"></ZoomEndTime>
+      <Cursor1Time time="100400000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="8" />
+   <wave_markers>
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+   </wave_markers>
+   <wvobject fp_name="/testbench_boot/SI_ClkIn" type="logic">
+      <obj_property name="ElementShortName">SI_ClkIn</obj_property>
+      <obj_property name="ObjectShortName">SI_ClkIn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/edp_iva_i" type="array">
+      <obj_property name="ElementShortName">edp_iva_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">edp_iva_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/mpc/mpc_ir_e" type="array">
+      <obj_property name="ElementShortName">mpc_ir_e[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mpc_ir_e[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/dcc/dcc_dmiss_m" type="logic">
+      <obj_property name="ElementShortName">dcc_dmiss_m</obj_property>
+      <obj_property name="ObjectShortName">dcc_dmiss_m</obj_property>
+   </wvobject>
+   <wvobject fp_name="group101" type="group">
+      <obj_property name="label">BusSignals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/HADDR" type="array">
+         <obj_property name="ElementShortName">HADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">HADDR[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/HRDATA" type="array">
+         <obj_property name="ElementShortName">HRDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">HRDATA[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group108" type="group">
+      <obj_property name="label">CriticalWord-Selection</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/hrdata_reg" type="array">
+         <obj_property name="ElementShortName">hrdata_reg[31:0]</obj_property>
+         <obj_property name="ObjectShortName">hrdata_reg[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/dcc/fb/biu_datain" type="array">
+         <obj_property name="ElementShortName">biu_datain[31:0]</obj_property>
+         <obj_property name="ObjectShortName">biu_datain[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/dcc/fb/new_data" type="array">
+         <obj_property name="ElementShortName">new_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">new_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/dcc/fb/fb_data_next0" type="array">
+         <obj_property name="ElementShortName">fb_data_next0[31:0]</obj_property>
+         <obj_property name="ObjectShortName">fb_data_next0[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/dcc/fb/fb_data_next1" type="array">
+         <obj_property name="ElementShortName">fb_data_next1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">fb_data_next1[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/dcc/fb/fb_data_next2" type="array">
+         <obj_property name="ElementShortName">fb_data_next2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">fb_data_next2[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/dcc/fb/fb_data_next3" type="array">
+         <obj_property name="ElementShortName">fb_data_next3[31:0]</obj_property>
+         <obj_property name="ObjectShortName">fb_data_next3[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/dcc/fb/dval_m_sel" type="array">
+         <obj_property name="ElementShortName">dval_m_sel[19:2]</obj_property>
+         <obj_property name="ObjectShortName">dval_m_sel[19:2]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/dcc/fb/fb_data" type="array">
+         <obj_property name="ElementShortName">fb_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">fb_data[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group111" type="group">
+      <obj_property name="label">LoadReadData</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/dcc/dcc_ddata_m" type="array">
+         <obj_property name="ElementShortName">dcc_ddata_m[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dcc_ddata_m[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/ld_or_cp_m" type="array">
+         <obj_property name="ElementShortName">ld_or_cp_m[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ld_or_cp_m[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/dcc/edp_ldcpdata_w" type="array">
+         <obj_property name="ElementShortName">edp_ldcpdata_w[31:0]</obj_property>
+         <obj_property name="ObjectShortName">edp_ldcpdata_w[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group116" type="group">
+      <obj_property name="label">RunSignals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/mpc/mpc_run_i" type="logic">
+         <obj_property name="ElementShortName">mpc_run_i</obj_property>
+         <obj_property name="ObjectShortName">mpc_run_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/mpc/mpc_run_ie" type="logic">
+         <obj_property name="ElementShortName">mpc_run_ie</obj_property>
+         <obj_property name="ObjectShortName">mpc_run_ie</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/mpc/mpc_run_m" type="logic">
+         <obj_property name="ElementShortName">mpc_run_m</obj_property>
+         <obj_property name="ObjectShortName">mpc_run_m</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/mpc/mpc_run_w" type="logic">
+         <obj_property name="ElementShortName">mpc_run_w</obj_property>
+         <obj_property name="ObjectShortName">mpc_run_w</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

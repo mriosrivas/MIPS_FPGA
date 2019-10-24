@@ -1,0 +1,23 @@
+9fc00000 <main>:
+9fc00000:	3c08bf80 	lui	t0,0xbf80
+9fc00004:	24090007 	li	t1,7
+9fc00008:	200a0000 	addi	t2,zero,0
+9fc0000c:	ad0a000c 	sw	t2,12(t0)
+9fc00010:	00005820 	add	t3,zero,zero
+9fc00014:	200c0004 	addi	t4,zero,4
+9fc00018:	00007020 	add	t6,zero,zero
+
+9fc0001c <L1>:
+9fc0001c:	712c6802 	mul	t5,t1,t4
+9fc00020:	01a95004 	sllv	t2,t1,t5
+9fc00024:	01ca7025 	or	t6,t6,t2
+9fc00028:	2129ffff 	addi	t1,t1,-1
+9fc0002c:	0521fffb 	bgez	t1,80000220 <L1>
+9fc00030:	00000000 	nop
+9fc00034:	00000000 	nop
+9fc00038:	ad0e0010 	sw	t6,16(t0)
+
+9fc0003c <L2>:
+9fc0003c:	1000ffff 	b	80000240 <L2>
+9fc00040:	00000000 	nop
+9fc00044:	00000000 	nop

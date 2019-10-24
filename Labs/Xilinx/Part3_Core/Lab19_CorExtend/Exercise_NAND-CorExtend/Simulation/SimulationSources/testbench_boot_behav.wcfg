@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_boot_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench_boot" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="93064875000fs"></ZoomStartTime>
+      <ZoomEndTime time="93115275000fs"></ZoomEndTime>
+      <Cursor1Time time="93145100000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="10" />
+   <wave_markers>
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+   </wave_markers>
+   <wvobject fp_name="/testbench_boot/SI_ClkIn" type="logic">
+      <obj_property name="ElementShortName">SI_ClkIn</obj_property>
+      <obj_property name="ObjectShortName">SI_ClkIn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/edp_iva_i" type="array">
+      <obj_property name="ElementShortName">edp_iva_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">edp_iva_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/icc/icc_idata_i" type="array">
+      <obj_property name="ElementShortName">icc_idata_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">icc_idata_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/mpc/mpc_ir_e" type="array">
+      <obj_property name="ElementShortName">mpc_ir_e[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mpc_ir_e[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="group165" type="group">
+      <obj_property name="label">RegisterFile-Read</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/rf/mpc_rega_i" type="array">
+         <obj_property name="ElementShortName">mpc_rega_i[8:0]</obj_property>
+         <obj_property name="ObjectShortName">mpc_rega_i[8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/rf/rf_adt_e" type="array">
+         <obj_property name="ElementShortName">rf_adt_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_adt_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/rf/mpc_regb_i" type="array">
+         <obj_property name="ElementShortName">mpc_regb_i[8:0]</obj_property>
+         <obj_property name="ObjectShortName">mpc_regb_i[8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/rf/rf_bdt_e" type="array">
+         <obj_property name="ElementShortName">rf_bdt_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_bdt_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group317" type="group">
+      <obj_property name="label">UDI-Operation</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/udi/UDI_rs_e" type="array">
+         <obj_property name="ElementShortName">UDI_rs_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">UDI_rs_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/udi/UDI_rt_e" type="array">
+         <obj_property name="ElementShortName">UDI_rt_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">UDI_rt_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/udi/udi_res_e" type="array">
+         <obj_property name="ElementShortName">udi_res_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">udi_res_e[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/res_m" type="array">
+         <obj_property name="ElementShortName">res_m[31:0]</obj_property>
+         <obj_property name="ObjectShortName">res_m[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group60" type="group">
+      <obj_property name="label">UDI-DestinationRegister</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/misc/edp_udi_wrreg_e" type="array">
+         <obj_property name="ElementShortName">edp_udi_wrreg_e[4:0]</obj_property>
+         <obj_property name="ObjectShortName">edp_udi_wrreg_e[4:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group167" type="group">
+      <obj_property name="label">RegisterFile-Write-AritLogic</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/rf/mpc_rfwrite_w" type="logic">
+         <obj_property name="ElementShortName">mpc_rfwrite_w</obj_property>
+         <obj_property name="ObjectShortName">mpc_rfwrite_w</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/rf/mpc_dest_w" type="array">
+         <obj_property name="ElementShortName">mpc_dest_w[8:0]</obj_property>
+         <obj_property name="ObjectShortName">mpc_dest_w[8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/rf/edp_wrdata_w" type="array">
+         <obj_property name="ElementShortName">edp_wrdata_w[31:0]</obj_property>
+         <obj_property name="ObjectShortName">edp_wrdata_w[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/rf/rf_reg0/rf13" type="array">
+      <obj_property name="ElementShortName">rf13[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rf13[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/rf/rf_reg0/rf14" type="array">
+      <obj_property name="ElementShortName">rf14[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rf14[31:0]</obj_property>
+   </wvobject>
+</wave_config>

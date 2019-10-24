@@ -1,0 +1,328 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/RAMB4K_S16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAMB4K_S16
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/RAMB4K_S2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAMB4K_S2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/RAMB4K_S8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAMB4K_S8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/d_wsram_2k2way_xilinx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module d_wsram_2k2way_xilinx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/dataram_2k2way_xilinx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataram_2k2way_xilinx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/i_wsram_2k2way_xilinx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_wsram_2k2way_xilinx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_alu_dsp_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_alu_dsp_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_alu_shft_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_alu_shft_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_bistctl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_bistctl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_biu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_biu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cache_cmp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cache_cmp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cache_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cache_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cdmm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cdmm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cdmm_ctl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cdmm_ctl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cdmm_mpustub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cdmm_mpustub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_clock_buf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_clock_buf
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_clock_nogate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_clock_nogate
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_clockandlatch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_clockandlatch
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_clockxnorgate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_clockxnorgate
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cop1_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cop1_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cop2_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cop2_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cp1_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cp1_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cp2_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cp2_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpz_antitamper_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpz_antitamper_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpz_eicoffset_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpz_eicoffset_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpz_guest_srs1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpz_guest_srs1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpz_guest_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpz_guest_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpz_pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpz_pc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpz_pc_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpz_pc_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpz_prid.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpz_prid
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpz_root_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpz_root_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpz_sps_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpz_sps_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpz_srs1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpz_srs1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cpz_watch_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cpz_watch_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cscramble_scanio_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cscramble_scanio_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cscramble_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cscramble_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_cscramble_tpl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_cscramble_tpl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_dc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_dc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_dc_bistctl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_dc_bistctl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_dcc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_dcc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_dcc_fb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_dcc_fb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_dcc_mb_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_dcc_mb_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_dcc_parity_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_dcc_parity_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_dcc_spmb_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_dcc_spmb_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_dcc_spstub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_dcc_spstub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_dspram_ext_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_dspram_ext_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_edp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_edp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_edp_add_simple.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_edp_add_simple
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_edp_buf_misc_pro.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_edp_buf_misc_pro
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_edp_clz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_edp_clz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_edp_clz_16b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_edp_clz_16b
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_edp_clz_4b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_edp_clz_4b
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_and2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_and2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_area.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_area
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_async_rec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_async_rec
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_async_snd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_async_snd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_brk21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_brk21
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_bus32mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_bus32mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_dbrk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_dbrk
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_fifo_1r1w_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_fifo_1r1w_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_gate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_gate
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_ibrk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_ibrk
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_pdttcb_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_pdttcb_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_tap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_tap
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_tap_dasam.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_tap_dasam
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_tap_fdc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_tap_fdc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_tap_pcsam.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_tap_pcsam
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_tck.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_tck
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ejt_tripsync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ejt_tripsync
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_fpuclk1_nogate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_fpuclk1_nogate
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_gf_mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_gf_mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_glue.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_glue
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ic
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ic_bistctl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ic_bistctl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_icc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_icc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_icc_mb_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_icc_mb_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_icc_parity_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_icc_parity_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_icc_spmb_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_icc_spmb_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_icc_spstub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_icc_spstub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_icc_umips_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_icc_umips_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_ispram_ext_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_ispram_ext_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_mdl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_mdl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_mdl_add_simple.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_mdl_add_simple
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_mdl_ctl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_mdl_ctl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_mdl_dp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_mdl_dp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_mmuc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_mmuc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_mpc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_mpc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_mpc_ctl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_mpc_ctl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_mpc_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_mpc_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_mpc_exc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_mpc_exc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_rf_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_rf_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_rf_rngc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_rf_rngc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_rf_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_rf_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_siu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_siu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_siu_int_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_siu_int_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_spram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_spram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_tlb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_tlb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_tlb_collector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_tlb_collector
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_tlb_cpy.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_tlb_cpy
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_tlb_ctl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_tlb_ctl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_tlb_dtlb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_tlb_dtlb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_tlb_itlb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_tlb_itlb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_tlb_jtlb16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_tlb_jtlb16
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_tlb_jtlb16entries.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_tlb_jtlb16entries
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_tlb_jtlb1entry.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_tlb_jtlb1entry
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_tlb_jtlb4entries.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_tlb_jtlb4entries
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_tlb_utlb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_tlb_utlb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_tlb_utlbentry.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_tlb_utlbentry
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_udi_custom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_udi_custom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/m14k_udi_scanio_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m14k_udi_scanio_stub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/mfp_ahb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfp_ahb
+INFO: [VRFC 10-311] analyzing module ahb_decoder
+INFO: [VRFC 10-311] analyzing module ahb_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/memories/mfp_ahb_b_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfp_ahb_b_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/mfp_ahb_gpio.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfp_ahb_gpio
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/memories/mfp_ahb_p_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfp_ahb_p_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/mfp_ahb_withloader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfp_ahb_withloader
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/mfp_ejtag_reset.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfp_ejtag_reset
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/mfp_srec_parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfp_srec_parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/mfp_srec_parser_to_ahb_lite_bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfp_srec_parser_to_ahb_lite_bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/mfp_sys.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfp_sys
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/mfp_uart_receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfp_uart_receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_cregister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_cregister
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_cregister_c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_cregister_c
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_cregister_ngc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_cregister_ngc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_cregister_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_cregister_s
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_cregister_wide.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_cregister_wide
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_cregister_wide_tlb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_cregister_wide_tlb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_cregister_wide_utlb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_cregister_wide_utlb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_latchn.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_latchn
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux16
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux1hot_10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux1hot_10
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux1hot_13.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux1hot_13
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux1hot_24.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux1hot_24
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux1hot_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux1hot_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux1hot_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux1hot_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux1hot_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux1hot_5
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux1hot_6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux1hot_6
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux1hot_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux1hot_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux1hot_9.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux1hot_9
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux4
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_mux8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_mux8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_register_c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_register_c
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_register_ngc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_register_ngc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_register_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_register_s
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/mvp_ucregister_wide.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mvp_ucregister_wide
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/memories/ram_b0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_b0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/memories/ram_b1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_b1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/memories/ram_b2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_b2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/memories/ram_b3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_b3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/memories/ram_p0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_p0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/memories/ram_p1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_p1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/memories/ram_p2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_p2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/system/memories/ram_p3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_p3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/core/tagram_2k2way_xilinx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tagram_2k2way_xilinx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_GSG_v2.0.0/MIPSfpga_GSG/rtl_up/testbench/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_Labs_v2.0/MIPSfpga_Labs/Labs/Xilinx/Part1_Intro/Lab01_Vivado/Project_1/Project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

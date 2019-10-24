@@ -1,0 +1,81 @@
+9fc00000:	3c09bf30 	lui	t1,0xbf30
+9fc00004:	3c0a8000 	lui	t2,0x8000
+9fc00008:	354a1b00 	ori	t2,t2,0x1b00
+9fc0000c:	3c0b8000 	lui	t3,0x8000
+9fc00010:	356b1b30 	ori	t3,t3,0x1b30
+9fc00014:	3c0c206c 	lui	t4,0x206c
+9fc00018:	358c6970 	ori	t4,t4,0x6970
+9fc0001c:	ad4c0000 	sw	t4,0(t2)
+9fc00020:	3c0c596f 	lui	t4,0x596f
+9fc00024:	358c7572 	ori	t4,t4,0x7572
+9fc00028:	ad4c0004 	sw	t4,4(t2)
+9fc0002c:	3c0c6520 	lui	t4,0x6520
+9fc00030:	358c736d 	ori	t4,t4,0x736d
+9fc00034:	ad4c0008 	sw	t4,8(t2)
+9fc00038:	3c0c7320 	lui	t4,0x7320
+9fc0003c:	358c6172 	ori	t4,t4,0x6172
+9fc00040:	ad4c000c 	sw	t4,12(t2)
+9fc00044:	3c0c6572 	lui	t4,0x6572
+9fc00048:	358c2074 	ori	t4,t4,0x2074
+9fc0004c:	ad4c0010 	sw	t4,16(t2)
+9fc00050:	3c0c6f6f 	lui	t4,0x6f6f
+9fc00054:	358c7468 	ori	t4,t4,0x7468
+9fc00058:	ad4c0014 	sw	t4,20(t2)
+9fc0005c:	0ff0003c 	jal	9fc000f0 <display>
+9fc00060:	000a2020 	add	a0,zero,t2
+9fc00064:	ad2a0000 	sw	t2,0(t1)
+9fc00068:	ad2b0004 	sw	t3,4(t1)
+9fc0006c:	200c0018 	addi	t4,zero,24
+9fc00070:	ad2c0008 	sw	t4,8(t1)
+9fc00074:	3c0cea6d 	lui	t4,0xea6d
+9fc00078:	358c0d73 	ori	t4,t4,0xd73
+9fc0007c:	ad2c0010 	sw	t4,16(t1)
+9fc00080:	3c0c0e32 	lui	t4,0xe32
+9fc00084:	358c9232 	ori	t4,t4,0x9232
+9fc00088:	ad2c0014 	sw	t4,20(t1)
+9fc0008c:	ad200018 	sw	zero,24(t1)
+9fc00090:	200c0001 	addi	t4,zero,1
+9fc00094:	ad2c000c 	sw	t4,12(t1)
+9fc00098:	0ff0003c 	jal	9fc000f0 <display>
+9fc0009c:	000b2020 	add	a0,zero,t3
+9fc000a0:	00000000 	nop
+9fc000a4:	ad0e0010 	nop
+9fc000a8:	200c0001 	addi	t4,zero,1
+9fc000ac:	ad2c0018 	sw	t4,24(t1)
+9fc000b0:	200c0001 	addi	t4,zero,1
+9fc000b4:	ad2c000c 	sw	t4,12(t1)
+9fc000b8:	0ff0003c 	jal	9fc000f0 <display>
+9fc000bc:	000b2020 	add	a0,zero,t3
+9fc000c0:	00000000 	nop
+9fc000c4:	ad2b0000 	sw	t3,0(t1)
+9fc000c8:	200c0002 	addi	t4,zero,2
+9fc000cc:	ad2c0018 	sw	t4,24(t1)
+9fc000d0:	200c0001 	addi	t4,zero,1
+9fc000d4:	ad2c000c 	sw	t4,12(t1)
+9fc000d8:	0ff0003c 	jal	9fc000f0 <display>
+9fc000dc:	000b2020 	add	a0,zero,t3
+9fc000e0:	00000000 	nop
+
+9fc000e4 <L2>:
+9fc000e4:	1000ffff 	b	800002e8 <L2>
+9fc000e8:	00000000 	nop
+9fc000ec:	00000000 	nop
+
+9fc000f0 <display>:
+9fc000f0:	3c08bf80 	lui	t0,0xbf80
+9fc000f4:	ad00000c 	sw	zero,12(t0)
+9fc000f8:	208c0018 	addi	t4,a0,24
+
+9fc000fc <repeat>:
+9fc000fc:	108c0007 	beq	a0,t4,80000320 <done>
+9fc00100:	00000000 	nop
+9fc00104:	00000000 	nop
+9fc00108:	8c8d0000 	lw	t5,0(a0)
+9fc0010c:	ad0d0010 	sw	t5,16(t0)
+9fc00110:	0bf0003f 	j	9fc000fc <repeat>
+9fc00114:	20840004 	addi	a0,a0,4
+9fc00118:	00000000 	nop
+
+9fc0011c <done>:
+9fc0011c:	03e00008 	jr	ra
+9fc00120:	00000000 	nop

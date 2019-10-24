@@ -1,0 +1,837 @@
+
+program.elf:     file format elf32-tradlittlemips
+
+SYMBOL TABLE:
+9fc00000 l    d  .bootrom	00000000 .bootrom
+80000000 l    d  .exception_vector	00000000 .exception_vector
+80000200 l    d  .text	00000000 .text
+80000260 l    d  .data	00000000 .data
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .mdebug.abi32	00000000 .mdebug.abi32
+00000000 l    d  .pdr	00000000 .pdr
+00000000 l    d  .gnu.attributes	00000000 .gnu.attributes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    df *ABS*	00000000 boot.o
+9fc00004 l       .bootrom	00000000 init_cp0
+9fc00018 l       .bootrom	00000000 init_tlb
+9fc00060 l       .bootrom	00000000 init_icache
+9fc00044 l       .bootrom	00000000 next_tlb_entry
+9fc000ac l       .bootrom	00000000 done_icache
+9fc0009c l       .bootrom	00000000 next_icache_tag
+9fc000ac l       .bootrom	00000000 enable_k0_cache
+9fc000cc l       .bootrom	00000000 init_dcache
+9fc0011c l       .bootrom	00000000 done_dcache
+9fc0010c l       .bootrom	00000000 next_dcache_tag
+9fc0013c l       .bootrom	00000000 all_done
+00000000 l    df *ABS*	00000000 exceptions.o
+80000000 l       .exception_vector	00000000 __tlb_refill_loop
+80000080 l       .exception_vector	00000000 __xtlb_refill_loop
+80000100 l       .exception_vector	00000000 __cache_error_loop
+80000180 l       .exception_vector	00000000 __general_exception_loop
+00000000 l    df *ABS*	00000000 main.c
+80000214 l       .text	00000000 loop
+80000260 g       .data	00000000 _fdata
+80000200  w    F .text	00000000 __exception_handle_verbose
+80000244 g       .text	00000000 _etext
+80008290 g       *ABS*	00000000 _gp
+00000020 g       *ABS*	00000000 __isr_vec_space
+80000290 g       .data	00000000 _bss_start
+00000000 g       *ABS*	00000000 __DYNAMIC
+00000001 g       *ABS*	00000000 __use_excpt_boot
+00000000  w      *UND*	00000000 _mips_xtlb_refill
+80000200  w    F .text	00000000 __register_excpt_boot
+80000200  w    F .text	00000000 __register_excpt_handler
+80000000 g       *ABS*	00000000 __app_start
+80000000 g       *ABS*	00000000 __flash_app_start
+80000200 g       .text	00000000 _ftext
+9fc00144 g     F .bootrom	0000006c _start
+80000000 g       *ABS*	00000000 __excpt_ebase
+80000204 g     F .text	00000040 main
+80000200 g     F .text	00000000 __exception_handle
+bfc00000 g       *ABS*	00000000 __entry
+80000200  w    F .text	00000004 __getargs
+00000000  w      *UND*	00000000 _mips_general_exception
+00000000  w      *UND*	00000000 _mips_tlb_refill
+00000000  w      *UND*	00000000 _mips_cache_error
+80040000 g       *ABS*	00000000 __stack
+80000000 g     F .exception_vector	00000198 __exception_entry
+80000000 g       .exception_vector	00000000 __base
+80000290 g       .data	00000000 _edata
+bfc00000 g       *ABS*	00000000 __flash_start
+80000290 g       .data	00000000 _end
+9fc00000 g     F .bootrom	00000144 __reset_vector
+0001f800 g       *ABS*	00000000 __memory_size
+80008290 g       *ABS*	00000000 __global
+80000200  w    F .text	00000000 __isr_vec
+00000000 g       *ABS*	00000000 __isr_vec_count
+80000260 g     O .data	00000028 test_data
+80000290 g       .data	00000000 _fbss
+
+
+
+Disassembly of section .bootrom:
+
+9fc00000 <__reset_vector>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:20
+9fc00000:	40804800 	mtc0	zero,c0_count
+
+9fc00004 <init_cp0>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:27
+9fc00004:	3c030040 	lui	v1,0x40
+9fc00008:	34630004 	ori	v1,v1,0x4
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:28
+9fc0000c:	40836000 	mtc0	v1,c0_status
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:31
+9fc00010:	40806800 	mtc0	zero,c0_cause
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:34
+9fc00014:	40805800 	mtc0	zero,c0_compare
+
+9fc00018 <init_tlb>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:44
+9fc00018:	40038000 	mfc0	v1,c0_config
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:45
+9fc0001c:	7c6311c0 	ext	v1,v1,0x7,0x3
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:46
+9fc00020:	24070001 	li	a3,1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:47
+9fc00024:	1467000e 	bne	v1,a3,9fc00060 <init_icache>
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:50
+9fc00028:	40028001 	mfc0	v0,c0_config1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:51
+9fc0002c:	7c432e40 	ext	v1,v0,0x19,0x6
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:52
+9fc00030:	40801000 	mtc0	zero,c0_entrylo0
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:53
+9fc00034:	40801800 	mtc0	zero,c0_entrylo1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:54
+9fc00038:	40802800 	mtc0	zero,c0_pagemask
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:55
+9fc0003c:	40803000 	mtc0	zero,c0_wired
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:56
+9fc00040:	3c048000 	lui	a0,0x8000
+
+9fc00044 <next_tlb_entry>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:59
+9fc00044:	40830000 	mtc0	v1,c0_index
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:60
+9fc00048:	40845000 	mtc0	a0,c0_entryhi
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:61
+9fc0004c:	000000c0 	ehb
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:62
+9fc00050:	42000002 	tlbwi
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:63
+9fc00054:	20844000 	addi	a0,a0,16384
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:65
+9fc00058:	1460fffa 	bnez	v1,9fc00044 <next_tlb_entry>
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:66
+9fc0005c:	2063ffff 	addi	v1,v1,-1
+
+9fc00060 <init_icache>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:73
+9fc00060:	40028001 	mfc0	v0,c0_config1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:74
+9fc00064:	7c4314c0 	ext	v1,v0,0x13,0x3
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:75
+9fc00068:	10600010 	beqz	v1,9fc000ac <done_icache>
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:76
+9fc0006c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:78
+9fc00070:	24060002 	li	a2,2
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:79
+9fc00074:	00661804 	sllv	v1,a2,v1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:81
+9fc00078:	7c441580 	ext	a0,v0,0x16,0x3
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:82
+9fc0007c:	24060040 	li	a2,64
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:83
+9fc00080:	00862004 	sllv	a0,a2,a0
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:85
+9fc00084:	7c451400 	ext	a1,v0,0x10,0x3
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:86
+9fc00088:	20a50001 	addi	a1,a1,1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:87
+9fc0008c:	70852002 	mul	a0,a0,a1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:88
+9fc00090:	3c068000 	lui	a2,0x8000
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:90
+9fc00094:	4080e000 	mtc0	zero,c0_taglo
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:91
+9fc00098:	00803825 	move	a3,a0
+
+9fc0009c <next_icache_tag>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:96
+9fc0009c:	bcc80000 	cache	0x8,0(a2)
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:97
+9fc000a0:	20e7ffff 	addi	a3,a3,-1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:98
+9fc000a4:	14e0fffd 	bnez	a3,9fc0009c <next_icache_tag>
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:99
+9fc000a8:	00c33020 	add	a2,a2,v1
+
+9fc000ac <done_icache>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:111
+9fc000ac:	40028000 	mfc0	v0,c0_config
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:112
+9fc000b0:	24030003 	li	v1,3
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:113
+9fc000b4:	7c621004 	ins	v0,v1,0x0,0x3
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:114
+9fc000b8:	40828000 	mtc0	v0,c0_config
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:116
+9fc000bc:	3c069fc0 	lui	a2,0x9fc0
+9fc000c0:	24c600cc 	addiu	a2,a2,204
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:117
+9fc000c4:	00c00008 	jr	a2
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:118
+9fc000c8:	000000c0 	ehb
+
+9fc000cc <init_dcache>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:124
+9fc000cc:	40028001 	mfc0	v0,c0_config1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:125
+9fc000d0:	7c431280 	ext	v1,v0,0xa,0x3
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:126
+9fc000d4:	10600011 	beqz	v1,9fc0011c <done_dcache>
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:127
+9fc000d8:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:129
+9fc000dc:	24060002 	li	a2,2
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:130
+9fc000e0:	00661804 	sllv	v1,a2,v1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:132
+9fc000e4:	7c441340 	ext	a0,v0,0xd,0x3
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:133
+9fc000e8:	24060040 	li	a2,64
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:134
+9fc000ec:	00862004 	sllv	a0,a2,a0
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:136
+9fc000f0:	7c4511c0 	ext	a1,v0,0x7,0x3
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:137
+9fc000f4:	20a50001 	addi	a1,a1,1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:138
+9fc000f8:	70852002 	mul	a0,a0,a1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:139
+9fc000fc:	3c068000 	lui	a2,0x8000
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:141
+9fc00100:	4080e000 	mtc0	zero,c0_taglo
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:142
+9fc00104:	4080e002 	mtc0	zero,c0_taglo1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:143
+9fc00108:	00803825 	move	a3,a0
+
+9fc0010c <next_dcache_tag>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:148
+9fc0010c:	bcc90000 	cache	0x9,0(a2)
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:149
+9fc00110:	20e7ffff 	addi	a3,a3,-1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:150
+9fc00114:	14e0fffd 	bnez	a3,9fc0010c <next_dcache_tag>
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:151
+9fc00118:	00c33020 	add	a2,a2,v1
+
+9fc0011c <done_dcache>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:156
+9fc0011c:	3c1f9fc0 	lui	ra,0x9fc0
+9fc00120:	27ff013c 	addiu	ra,ra,316
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:157
+9fc00124:	00002025 	move	a0,zero
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:159
+9fc00128:	3c029fc0 	lui	v0,0x9fc0
+9fc0012c:	24420144 	addiu	v0,v0,324
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:160
+9fc00130:	4082f000 	mtc0	v0,c0_errorepc
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:161
+9fc00134:	000000c0 	ehb
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:165
+9fc00138:	42000018 	eret
+
+9fc0013c <all_done>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:171
+9fc0013c:	1000ffff 	b	9fc0013c <all_done>
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/boot.S:172
+9fc00140:	00000000 	nop
+
+9fc00144 <_start>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:16
+9fc00144:	03e08025 	move	s0,ra
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:18
+9fc00148:	3c1c8001 	lui	gp,0x8001
+9fc0014c:	279c8290 	addiu	gp,gp,-32112
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:20
+9fc00150:	3c1d8004 	lui	sp,0x8004
+9fc00154:	27bd0000 	addiu	sp,sp,0
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:22
+9fc00158:	3c028000 	lui	v0,0x8000
+9fc0015c:	24420290 	addiu	v0,v0,656
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:23
+9fc00160:	3c038000 	lui	v1,0x8000
+9fc00164:	24630290 	addiu	v1,v1,656
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:24
+9fc00168:	10430004 	beq	v0,v1,9fc0017c <_start+0x38>
+9fc0016c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:26
+9fc00170:	24420004 	addiu	v0,v0,4
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:28
+9fc00174:	1443fffe 	bne	v0,v1,9fc00170 <_start+0x2c>
+9fc00178:	ac40fffc 	sw	zero,-4(v0)
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:31
+9fc0017c:	24040000 	li	a0,0
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:33
+9fc00180:	27bdfff0 	addiu	sp,sp,-16
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:37
+9fc00184:	40026000 	mfc0	v0,c0_status
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:38
+9fc00188:	7c02b584 	ins	v0,zero,0x16,0x1
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:39
+9fc0018c:	40826000 	mtc0	v0,c0_status
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:40
+9fc00190:	000000c0 	ehb
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:43
+9fc00194:	3c088000 	lui	t0,0x8000
+9fc00198:	25080204 	addiu	t0,t0,516
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:44
+9fc0019c:	0100f809 	jalr	t0
+9fc001a0:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:47
+9fc001a4:	0200f825 	move	ra,s0
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/crt0.S:48
+9fc001a8:	03e00008 	jr	ra
+9fc001ac:	00000000 	nop
+
+Disassembly of section .exception_vector:
+
+80000000 <__exception_entry>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/exceptions.S:45
+80000000:	3c1b0000 	lui	k1,0x0
+80000004:	277b0000 	addiu	k1,k1,0
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/exceptions.S:46
+80000008:	1360fffd 	beqz	k1,80000000 <__exception_entry>
+8000000c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/exceptions.S:47
+80000010:	03600008 	jr	k1
+80000014:	00000000 	nop
+	...
+
+80000080 <__xtlb_refill_loop>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/exceptions.S:52
+80000080:	3c1b0000 	lui	k1,0x0
+80000084:	277b0000 	addiu	k1,k1,0
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/exceptions.S:53
+80000088:	1360fffd 	beqz	k1,80000080 <__xtlb_refill_loop>
+8000008c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/exceptions.S:54
+80000090:	03600008 	jr	k1
+80000094:	00000000 	nop
+	...
+
+80000100 <__cache_error_loop>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/exceptions.S:59
+80000100:	3c1b0000 	lui	k1,0x0
+80000104:	277b0000 	addiu	k1,k1,0
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/exceptions.S:60
+80000108:	1360fffd 	beqz	k1,80000100 <__cache_error_loop>
+8000010c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/exceptions.S:61
+80000110:	03600008 	jr	k1
+80000114:	00000000 	nop
+	...
+
+80000180 <__general_exception_loop>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/exceptions.S:66
+80000180:	3c1b0000 	lui	k1,0x0
+80000184:	277b0000 	addiu	k1,k1,0
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/exceptions.S:67
+80000188:	1360fffd 	beqz	k1,80000180 <__general_exception_loop>
+8000018c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/exceptions.S:68
+80000190:	03600008 	jr	k1
+80000194:	00000000 	nop
+	...
+
+Disassembly of section .text:
+
+80000200 <__exception_handle>:
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/dummy.S:59
+80000200:	00000000 	nop
+
+80000204 <main>:
+main():
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/main.c:5
+80000204:	24090002 	li	t1,2
+80000208:	240a0000 	li	t2,0
+8000020c:	3c0e8000 	lui	t6,0x8000
+80000210:	25ce0260 	addiu	t6,t6,608
+
+80000214 <loop>:
+80000214:	00000000 	nop
+80000218:	adca0004 	sw	t2,4(t6)
+8000021c:	00000000 	nop
+80000220:	254a0001 	addiu	t2,t2,1
+80000224:	25ce0010 	addiu	t6,t6,16
+80000228:	0149082a 	slt	at,t2,t1
+8000022c:	1420fff9 	bnez	at,80000214 <loop>
+80000230:	00000000 	nop
+80000234:	1000ffff 	b	80000234 <loop+0x20>
+80000238:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_StoreD$Miss/main.c:22
+8000023c:	03e00008 	jr	ra
+80000240:	00001025 	move	v0,zero
+
+Disassembly of section .data:
+
+80000260 <_fdata>:
+_fdata():
+80000260:	00000000 	nop
+80000264:	00000001 	movf	zero,zero,$fcc0
+80000268:	00000002 	srl	zero,zero,0x0
+8000026c:	00000003 	sra	zero,zero,0x0
+80000270:	00000004 	sllv	zero,zero,zero
+80000274:	00000005 	lsa	zero,zero,zero,0x1
+80000278:	00000006 	srlv	zero,zero,zero
+8000027c:	00000007 	srav	zero,zero,zero
+80000280:	00000008 	jr	zero
+80000284:	00000009 	jalr	zero,zero
+80000288:	00000000 	nop
+8000028c:	00000000 	nop
+
+Disassembly of section .debug_aranges:
+
+00000000 <.debug_aranges>:
+   0:	0000001c 	0x1c
+   4:	00000002 	srl	zero,zero,0x0
+   8:	00040000 	sll	zero,a0,0x0
+   c:	00000000 	nop
+  10:	9fc00144 	0x9fc00144
+  14:	0000006c 	0x6c
+	...
+  20:	0000001c 	0x1c
+  24:	00640002 	0x640002
+  28:	00040000 	sll	zero,a0,0x0
+  2c:	00000000 	nop
+  30:	9fc00000 	0x9fc00000
+  34:	00000144 	0x144
+	...
+  40:	0000001c 	0x1c
+  44:	00c80002 	0xc80002
+  48:	00040000 	sll	zero,a0,0x0
+  4c:	00000000 	nop
+  50:	80000000 	lb	zero,0(zero)
+  54:	00000198 	0x198
+	...
+  60:	0000001c 	0x1c
+  64:	01320002 	0x1320002
+  68:	00040000 	sll	zero,a0,0x0
+  6c:	00000000 	nop
+  70:	80000200 	lb	zero,512(zero)
+  74:	00000004 	sllv	zero,zero,zero
+	...
+  80:	0000001c 	0x1c
+  84:	01970002 	0x1970002
+  88:	00040000 	sll	zero,a0,0x0
+  8c:	00000000 	nop
+  90:	80000204 	lb	zero,516(zero)
+  94:	00000040 	ssnop
+	...
+
+Disassembly of section .debug_info:
+
+00000000 <.debug_info>:
+   0:	00000060 	0x60
+   4:	00000002 	srl	zero,zero,0x0
+   8:	01040000 	0x1040000
+   c:	00000000 	nop
+  10:	9fc00144 	0x9fc00144
+  14:	9fc001b0 	0x9fc001b0
+  18:	30747263 	andi	s4,v1,0x7263
+  1c:	4300532e 	c0	0x100532e
+  20:	73555c3a 	0x73555c3a
+  24:	5c737265 	0x5c737265
+  28:	696e6144 	0x696e6144
+  2c:	7365445c 	udi12	k1,a1,t0,0x11
+  30:	706f746b 	s16std	xr1,v1,-70,ptn1
+  34:	6d69535c 	0x6d69535c
+  38:	74616c75 	jalx	185b1d4 <__memory_size+0x183b9d4>
+  3c:	536e6f69 	beql	k1,t6,1bde4 <__isr_vec_space+0x1bdc4>
+  40:	6372756f 	0x6372756f
+  44:	535f7365 	beql	k0,ra,1cddc <__isr_vec_space+0x1cdbc>
+  48:	65726f74 	0x65726f74
+  4c:	694d2444 	0x694d2444
+  50:	47007373 	bz.b	$w0,1ce20 <__isr_vec_space+0x1ce00>
+  54:	4120554e 	0x4120554e
+  58:	2e322053 	sltiu	s2,s1,8275
+  5c:	392e3432 	xori	t6,t1,0x3432
+  60:	80010030 	lb	at,48(zero)
+  64:	00000060 	0x60
+  68:	00140002 	srl	zero,s4,0x0
+  6c:	01040000 	0x1040000
+  70:	00000048 	0x48
+  74:	9fc00000 	0x9fc00000
+  78:	9fc00144 	0x9fc00144
+  7c:	746f6f62 	jalx	1bdbd88 <__memory_size+0x1bbc588>
+  80:	4300532e 	c0	0x100532e
+  84:	73555c3a 	0x73555c3a
+  88:	5c737265 	0x5c737265
+  8c:	696e6144 	0x696e6144
+  90:	7365445c 	udi12	k1,a1,t0,0x11
+  94:	706f746b 	s16std	xr1,v1,-70,ptn1
+  98:	6d69535c 	0x6d69535c
+  9c:	74616c75 	jalx	185b1d4 <__memory_size+0x183b9d4>
+  a0:	536e6f69 	beql	k1,t6,1be48 <__isr_vec_space+0x1be28>
+  a4:	6372756f 	0x6372756f
+  a8:	535f7365 	beql	k0,ra,1ce40 <__isr_vec_space+0x1ce20>
+  ac:	65726f74 	0x65726f74
+  b0:	694d2444 	0x694d2444
+  b4:	47007373 	bz.b	$w0,1ce84 <__isr_vec_space+0x1ce64>
+  b8:	4120554e 	0x4120554e
+  bc:	2e322053 	sltiu	s2,s1,8275
+  c0:	392e3432 	xori	t6,t1,0x3432
+  c4:	80010030 	lb	at,48(zero)
+  c8:	00000066 	0x66
+  cc:	00280002 	ror	zero,t0,0x0
+  d0:	01040000 	0x1040000
+  d4:	000000ce 	0xce
+  d8:	80000000 	lb	zero,0(zero)
+  dc:	80000198 	lb	zero,408(zero)
+  e0:	65637865 	0x65637865
+  e4:	6f697470 	0x6f697470
+  e8:	532e736e 	beql	t9,t6,1cea4 <__isr_vec_space+0x1ce84>
+  ec:	5c3a4300 	0x5c3a4300
+  f0:	72657355 	s32sdi	xr13,s3,1392
+  f4:	61445c73 	0x61445c73
+  f8:	445c696e 	0x445c696e
+  fc:	746b7365 	jalx	1adcd94 <__memory_size+0x1abd594>
+ 100:	535c706f 	beql	k0,gp,1c2c0 <__isr_vec_space+0x1c2a0>
+ 104:	6c756d69 	0x6c756d69
+ 108:	6f697461 	0x6f697461
+ 10c:	756f536e 	jalx	5bd4db8 <__memory_size+0x5bb55b8>
+ 110:	73656372 	0x73656372
+ 114:	6f74535f 	0x6f74535f
+ 118:	24446572 	addiu	a0,v0,25970
+ 11c:	7373694d 	0x7373694d
+ 120:	554e4700 	bnel	t2,t6,11d24 <__isr_vec_space+0x11d04>
+ 124:	20534120 	addi	s3,v0,16672
+ 128:	34322e32 	ori	s2,at,0x2e32
+ 12c:	0030392e 	0x30392e
+ 130:	00618001 	movt	s0,v1,$fcc0
+ 134:	00020000 	sll	zero,v0,0x0
+ 138:	0000003c 	0x3c
+ 13c:	011b0104 	0x11b0104
+ 140:	02000000 	0x2000000
+ 144:	02048000 	0x2048000
+ 148:	75648000 	jalx	5920000 <__memory_size+0x5900800>
+ 14c:	2e796d6d 	sltiu	t9,s3,28013
+ 150:	3a430053 	xori	v1,s2,0x53
+ 154:	6573555c 	0x6573555c
+ 158:	445c7372 	0x445c7372
+ 15c:	5c696e61 	0x5c696e61
+ 160:	6b736544 	0x6b736544
+ 164:	5c706f74 	0x5c706f74
+ 168:	756d6953 	jalx	5b5a54c <__memory_size+0x5b3ad4c>
+ 16c:	6974616c 	0x6974616c
+ 170:	6f536e6f 	0x6f536e6f
+ 174:	65637275 	0x65637275
+ 178:	74535f73 	jalx	14d7dcc <__memory_size+0x14b85cc>
+ 17c:	4465726f 	0x4465726f
+ 180:	73694d24 	s8ldi	xr4,k1,83,ptn2
+ 184:	4e470073 	c3	0x470073
+ 188:	53412055 	beql	k0,at,82e0 <__isr_vec_space+0x82c0>
+ 18c:	322e3220 	andi	t6,s1,0x3220
+ 190:	30392e34 	andi	t9,at,0x2e34
+ 194:	66800100 	0x66800100
+ 198:	04000000 	bltz	zero,19c <__isr_vec_space+0x17c>
+ 19c:	00005000 	sll	t2,zero,0x0
+ 1a0:	00010400 	sll	zero,at,0x10
+ 1a4:	01000000 	0x1000000
+ 1a8:	00000090 	0x90
+ 1ac:	00000053 	mtlhx	zero
+ 1b0:	80000204 	lb	zero,516(zero)
+ 1b4:	00000040 	ssnop
+ 1b8:	00000152 	0x152
+ 1bc:	0000a102 	srl	s4,zero,0x4
+ 1c0:	3a030100 	xori	v1,s0,0x100
+ 1c4:	04000000 	bltz	zero,1c8 <__isr_vec_space+0x1a8>
+ 1c8:	40800002 	mtc0	zero,c0_mvpconf0
+ 1cc:	01000000 	0x1000000
+ 1d0:	0504039c 	0x504039c
+ 1d4:	00746e69 	0x746e69
+ 1d8:	00003a04 	0x3a04
+ 1dc:	00005100 	sll	t2,zero,0x4
+ 1e0:	00510500 	0x510500
+ 1e4:	00090000 	sll	zero,t1,0x0
+ 1e8:	87070406 	lh	a3,1030(t8)
+ 1ec:	07000000 	bltz	t8,1f0 <__isr_vec_space+0x1d0>
+ 1f0:	00000097 	0x97
+ 1f4:	00410101 	0x410101
+ 1f8:	03050000 	0x3050000
+ 1fc:	80000260 	lb	zero,608(zero)
+	...
+
+Disassembly of section .debug_abbrev:
+
+00000000 <.debug_abbrev>:
+   0:	10001101 	b	4408 <__isr_vec_space+0x43e8>
+   4:	12011106 	beq	s0,at,4420 <__isr_vec_space+0x4400>
+   8:	1b080301 	0x1b080301
+   c:	13082508 	beq	t8,t0,9430 <__isr_vec_space+0x9410>
+  10:	00000005 	lsa	zero,zero,zero,0x1
+  14:	10001101 	b	441c <__isr_vec_space+0x43fc>
+  18:	12011106 	beq	s0,at,4434 <__isr_vec_space+0x4414>
+  1c:	1b080301 	0x1b080301
+  20:	13082508 	beq	t8,t0,9444 <__isr_vec_space+0x9424>
+  24:	00000005 	lsa	zero,zero,zero,0x1
+  28:	10001101 	b	4430 <__isr_vec_space+0x4410>
+  2c:	12011106 	beq	s0,at,4448 <__isr_vec_space+0x4428>
+  30:	1b080301 	0x1b080301
+  34:	13082508 	beq	t8,t0,9458 <__isr_vec_space+0x9438>
+  38:	00000005 	lsa	zero,zero,zero,0x1
+  3c:	10001101 	b	4444 <__isr_vec_space+0x4424>
+  40:	12011106 	beq	s0,at,445c <__isr_vec_space+0x443c>
+  44:	1b080301 	0x1b080301
+  48:	13082508 	beq	t8,t0,946c <__isr_vec_space+0x944c>
+  4c:	00000005 	lsa	zero,zero,zero,0x1
+  50:	25011101 	addiu	at,t0,4353
+  54:	030b130e 	0x30b130e
+  58:	110e1b0e 	beq	t0,t6,6c94 <__isr_vec_space+0x6c74>
+  5c:	10061201 	beq	zero,a2,4864 <__isr_vec_space+0x4844>
+  60:	02000017 	0x2000017
+  64:	193f002e 	0x193f002e
+  68:	0b3a0e03 	j	ce8380c <__memory_size+0xce6400c>
+  6c:	13490b3b 	beq	k0,t1,2d5c <__isr_vec_space+0x2d3c>
+  70:	06120111 	bltzall	s0,4b8 <__isr_vec_space+0x498>
+  74:	42971840 	c0	0x971840
+  78:	03000019 	multu	t8,zero
+  7c:	0b0b0024 	j	c2c0090 <__memory_size+0xc2a0890>
+  80:	08030b3e 	j	c2cf8 <__memory_size+0xa34f8>
+  84:	01040000 	0x1040000
+  88:	01134901 	0x1134901
+  8c:	05000013 	bltz	t0,dc <__isr_vec_space+0xbc>
+  90:	13490021 	beq	k0,t1,118 <__isr_vec_space+0xf8>
+  94:	00000b2f 	0xb2f
+  98:	0b002406 	j	c009018 <__memory_size+0xbfe9818>
+  9c:	030b3e0b 	0x30b3e0b
+  a0:	0700000e 	bltz	t8,dc <__isr_vec_space+0xbc>
+  a4:	0e030034 	jal	80c00d0 <__memory_size+0x80a08d0>
+  a8:	0b3b0b3a 	j	cec2ce8 <__memory_size+0xcea34e8>
+  ac:	193f1349 	0x193f1349
+  b0:	00001802 	srl	v1,zero,0x0
+	...
+
+Disassembly of section .debug_line:
+
+00000000 <.debug_line>:
+   0:	00000044 	0x44
+   4:	001d0002 	srl	zero,sp,0x0
+   8:	01010000 	0x1010000
+   c:	000d0efb 	0xd0efb
+  10:	01010101 	0x1010101
+  14:	01000000 	0x1000000
+  18:	00010000 	sll	zero,at,0x0
+  1c:	30747263 	andi	s4,v1,0x7263
+  20:	0000532e 	0x532e
+  24:	00000000 	nop
+  28:	01440205 	0x1440205
+  2c:	0f039fc0 	jal	c0e7f00 <__memory_size+0xc0c8700>
+  30:	84844c01 	lh	a0,19457(a0)
+  34:	4b848383 	c2	0x1848383
+  38:	4e4c8513 	c3	0x4c8513
+  3c:	4d4b4b4b 	0x4d4b4b4b
+  40:	024b8583 	0x24b8583
+  44:	01010008 	0x1010008
+  48:	00000082 	srl	zero,zero,0x2
+  4c:	001d0002 	srl	zero,sp,0x0
+  50:	01010000 	0x1010000
+  54:	000d0efb 	0xd0efb
+  58:	01010101 	0x1010101
+  5c:	01000000 	0x1000000
+  60:	00010000 	sll	zero,at,0x0
+  64:	746f6f62 	jalx	1bdbd88 <__memory_size+0x1bbc588>
+  68:	0000532e 	0x532e
+  6c:	00000000 	nop
+  70:	00000205 	0x205
+  74:	13039fc0 	beq	t8,v1,fffe7f78 <__entry+0x403e7f78>
+  78:	4d835101 	0x4d835101
+  7c:	4a0a034d 	c2	0xa034d
+  80:	4d4b4b4b 	0x4d4b4b4b
+  84:	4b4b4b4b 	c2	0x14b4b4b
+  88:	4b4d4b4b 	c2	0x14d4b4b
+  8c:	4c4b4b4b 	0x4c4b4b4b
+  90:	4b4b514b 	c2	0x14b514b
+  94:	4c4b4c4b 	0x4c4b4c4b
+  98:	4b4c4b4b 	c2	0x14c4b4b
+  9c:	4b4c4b4b 	c2	0x14c4b4b
+  a0:	4b4b4b4f 	c2	0x14b4b4f
+  a4:	4b4a0c03 	c2	0x14a0c03
+  a8:	834c4b4b 	lb	t4,19275(k0)
+  ac:	4b4b504b 	c2	0x14b504b
+  b0:	4c4b4c4b 	0x4c4b4c4b
+  b4:	4b4c4b4b 	c2	0x14c4b4b
+  b8:	4b4c4b4b 	c2	0x14c4b4b
+  bc:	4b4b4f4b 	c2	0x14b4f4b
+  c0:	4c834f4b 	0x4c834f4b
+  c4:	504e4b83 	beql	v0,t6,12ed4 <__isr_vec_space+0x12eb4>
+  c8:	0004024b 	0x4024b
+  cc:	00490101 	0x490101
+  d0:	00020000 	sll	zero,v0,0x0
+  d4:	00000023 	negu	zero,zero
+  d8:	0efb0101 	jal	bec0404 <__memory_size+0xbea0c04>
+  dc:	0101000d 	break	0x101
+  e0:	00000101 	0x101
+  e4:	00000100 	sll	zero,zero,0x4
+  e8:	78650001 	bmnzi.b	$w0,$w0,0x65
+  ec:	74706563 	jalx	1c1958c <__memory_size+0x1bf9d8c>
+  f0:	736e6f69 	0x736e6f69
+  f4:	0000532e 	0x532e
+  f8:	00000000 	nop
+  fc:	00000205 	0x205
+ 100:	2c038000 	sltiu	v1,zero,-32768
+ 104:	02838301 	0x2838301
+ 108:	83831770 	lb	v1,6000(gp)
+ 10c:	83177002 	lb	s7,28674(t8)
+ 110:	17700283 	bne	k1,s0,b20 <__isr_vec_space+0xb00>
+ 114:	08028383 	j	a0e0c <__memory_size+0x8160c>
+ 118:	33010100 	andi	at,t8,0x100
+ 11c:	02000000 	0x2000000
+ 120:	00001e00 	sll	v1,zero,0x18
+ 124:	fb010100 	sdc2	$1,256(t8)
+ 128:	01000d0e 	0x1000d0e
+ 12c:	00010101 	0x10101
+ 130:	00010000 	sll	zero,at,0x0
+ 134:	64000100 	0x64000100
+ 138:	796d6d75 	0x796d6d75
+ 13c:	0000532e 	0x532e
+ 140:	00000000 	nop
+ 144:	02000205 	0x2000205
+ 148:	3a038000 	xori	v1,s0,0x8000
+ 14c:	00040201 	0x40201
+ 150:	00360101 	0x360101
+ 154:	00020000 	sll	zero,v0,0x0
+ 158:	0000001d 	0x1d
+ 15c:	0efb0101 	jal	bec0404 <__memory_size+0xbea0c04>
+ 160:	0101000d 	break	0x101
+ 164:	00000101 	0x101
+ 168:	00000100 	sll	zero,zero,0x4
+ 16c:	616d0001 	0x616d0001
+ 170:	632e6e69 	0x632e6e69
+ 174:	00000000 	nop
+ 178:	02050000 	0x2050000
+ 17c:	80000204 	lb	zero,516(zero)
+ 180:	11031414 	beq	t0,v1,51d4 <__isr_vec_space+0x51b4>
+ 184:	02013802 	0x2013802
+ 188:	01010008 	0x1010008
+
+Disassembly of section .debug_frame:
+
+00000000 <.debug_frame>:
+   0:	0000000c 	syscall
+   4:	ffffffff 	sdc3	$31,-1(ra)
+   8:	7c010001 	0x7c010001
+   c:	001d0d1f 	0x1d0d1f
+  10:	0000000c 	syscall
+  14:	00000000 	nop
+  18:	80000204 	lb	zero,516(zero)
+  1c:	00000040 	ssnop
+
+Disassembly of section .debug_str:
+
+00000000 <.debug_str>:
+   0:	20554e47 	addi	s5,v0,20039
+   4:	2e342043 	sltiu	s4,s1,8259
+   8:	20322e39 	addi	s2,at,11833
+   c:	6c656d2d 	0x6c656d2d
+  10:	616d2d20 	0x616d2d20
+  14:	3d686372 	0x3d686372
+  18:	6b34316d 	0x6b34316d
+  1c:	6d2d2063 	0x6d2d2063
+  20:	74666f73 	jalx	199bdcc <__memory_size+0x197c5cc>
+  24:	6f6c662d 	0x6f6c662d
+  28:	2d207461 	sltiu	zero,t1,29793
+  2c:	746c706d 	jalx	1b1c1b4 <__memory_size+0x1afc9b4>
+  30:	696d2d20 	0x696d2d20
+  34:	32337370 	andi	s3,s1,0x7370
+  38:	2d203272 	sltiu	zero,t1,12914
+  3c:	6e79736d 	0x6e79736d
+  40:	2d206963 	sltiu	zero,t1,26979
+  44:	6962616d 	0x6962616d
+  48:	2032333d 	addi	s2,at,13117
+  4c:	2d20672d 	sltiu	zero,t1,26413
+  50:	4300314f 	c0	0x100314f
+  54:	73555c3a 	0x73555c3a
+  58:	5c737265 	0x5c737265
+  5c:	696e6144 	0x696e6144
+  60:	7365445c 	udi12	k1,a1,t0,0x11
+  64:	706f746b 	s16std	xr1,v1,-70,ptn1
+  68:	6d69535c 	0x6d69535c
+  6c:	74616c75 	jalx	185b1d4 <__memory_size+0x183b9d4>
+  70:	536e6f69 	beql	k1,t6,1be18 <__isr_vec_space+0x1bdf8>
+  74:	6372756f 	0x6372756f
+  78:	535f7365 	beql	k0,ra,1ce10 <__isr_vec_space+0x1cdf0>
+  7c:	65726f74 	0x65726f74
+  80:	694d2444 	0x694d2444
+  84:	73007373 	d32sar	xr13,xr12,xr1,xr0,12
+  88:	74657a69 	jalx	195e9a4 <__memory_size+0x193f1a4>
+  8c:	00657079 	0x657079
+  90:	6e69616d 	0x6e69616d
+  94:	7400632e 	jalx	18cb8 <__isr_vec_space+0x18c98>
+  98:	5f747365 	0x5f747365
+  9c:	61746164 	0x61746164
+  a0:	69616d00 	0x69616d00
+  a4:	Address 0x00000000000000a4 is out of bounds.
+
+
+Disassembly of section .pdr:
+
+00000000 <.pdr>:
+   0:	9fc00144 	0x9fc00144
+	...
+  20:	9fc00000 	0x9fc00000
+	...
+  40:	80000000 	lb	zero,0(zero)
+	...
+  60:	80000200 	lb	zero,512(zero)
+	...
+  80:	80000200 	lb	zero,512(zero)
+	...
+  a0:	80000200 	lb	zero,512(zero)
+	...
+  c0:	80000200 	lb	zero,512(zero)
+	...
+  e0:	80000200 	lb	zero,512(zero)
+	...
+ 100:	80000204 	lb	zero,516(zero)
+	...
+ 118:	0000001d 	0x1d
+ 11c:	0000001f 	0x1f
+
+Disassembly of section .gnu.attributes:
+
+00000000 <.gnu.attributes>:
+   0:	00000f41 	0xf41
+   4:	756e6700 	jalx	5b99c00 <__memory_size+0x5b7a400>
+   8:	00070100 	sll	zero,a3,0x4
+   c:	03040000 	0x3040000
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	3a434347 	xori	v1,s2,0x4347
+   4:	6f432820 	0x6f432820
+   8:	63736564 	0x63736564
+   c:	20657061 	addi	a1,v1,28769
+  10:	20554e47 	addi	s5,v0,20039
+  14:	6c6f6f54 	0x6c6f6f54
+  18:	30322073 	andi	s2,at,0x2073
+  1c:	302e3631 	andi	t6,at,0x3631
+  20:	33302d35 	andi	s0,t9,0x2d35
+  24:	726f6620 	0x726f6620
+  28:	50494d20 	beql	v0,t1,134ac <__isr_vec_space+0x1348c>
+  2c:	544d2053 	bnel	v0,t5,817c <__isr_vec_space+0x815c>
+  30:	61422049 	0x61422049
+  34:	4d206572 	0x4d206572
+  38:	6c617465 	0x6c617465
+  3c:	2e342029 	sltiu	s4,s1,8233
+  40:	00322e39 	0x322e39

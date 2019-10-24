@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Sep 26 19:40:56 2019
+# Process ID: 10012
+# Current directory: /media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_Labs_v2.0/MIPSfpga_Labs/Labs/Xilinx/Part1_Intro/Lab01_Vivado/Project_1/Project_1.runs/impl_1
+# Command line: vivado -log mfp_nexys4_ddr.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source mfp_nexys4_ddr.tcl -notrace
+# Log file: /media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_Labs_v2.0/MIPSfpga_Labs/Labs/Xilinx/Part1_Intro/Lab01_Vivado/Project_1/Project_1.runs/impl_1/mfp_nexys4_ddr.vdi
+# Journal file: /media/manuel/ExtraDrive1/URL/Hardware_Arquitecturas/Labs/MIPSfpga_Labs_v2.0/MIPSfpga_Labs/Labs/Xilinx/Part1_Intro/Lab01_Vivado/Project_1/Project_1.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source mfp_nexys4_ddr.tcl -notrace

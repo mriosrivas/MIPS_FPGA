@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_boot_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench_boot" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wave_markers>
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+   </wave_markers>
+   <wvobject db_ref_id="1" fp_name="/testbench_boot/SI_ClkIn" type="logic">
+      <obj_property name="ElementShortName">SI_ClkIn</obj_property>
+      <obj_property name="ObjectShortName">SI_ClkIn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/edp/edp_iva_i" type="array">
+      <obj_property name="ElementShortName">edp_iva_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">edp_iva_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/icc_idata_i" type="array">
+      <obj_property name="ElementShortName">icc_idata_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">icc_idata_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/mpc/mpc_ir_e" type="array">
+      <obj_property name="ElementShortName">mpc_ir_e[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mpc_ir_e[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/icc_imiss_i" type="logic">
+      <obj_property name="ElementShortName">icc_imiss_i</obj_property>
+      <obj_property name="ObjectShortName">icc_imiss_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="group335" type="group">
+      <obj_property name="label">ISPRAM-Read</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/spram/ISP_RdStr" type="logic">
+         <obj_property name="ElementShortName">ISP_RdStr</obj_property>
+         <obj_property name="ObjectShortName">ISP_RdStr</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/spram/ISP_DataRdValue" type="array">
+         <obj_property name="ElementShortName">ISP_DataRdValue[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ISP_DataRdValue[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/spram/ic_datain" type="array">
+         <obj_property name="ElementShortName">ic_datain[95:0]</obj_property>
+         <obj_property name="ObjectShortName">ic_datain[95:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/spram/spram_cache_data" type="array">
+         <obj_property name="ElementShortName">spram_cache_data[95:0]</obj_property>
+         <obj_property name="ObjectShortName">spram_cache_data[95:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/cache_recode" type="array">
+         <obj_property name="ElementShortName">cache_recode[191:0]</obj_property>
+         <obj_property name="ObjectShortName">cache_recode[191:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/datamuxout" type="array">
+         <obj_property name="ElementShortName">datamuxout[47:0]</obj_property>
+         <obj_property name="ObjectShortName">datamuxout[47:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group74" type="group">
+      <obj_property name="label">CacheOp-Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/cpz/errctl32" type="array">
+         <obj_property name="ElementShortName">errctl32[31:0]</obj_property>
+         <obj_property name="ObjectShortName">errctl32[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/cpz_spram" type="logic">
+         <obj_property name="ElementShortName">cpz_spram</obj_property>
+         <obj_property name="ObjectShortName">cpz_spram</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/spram/icop_write" type="logic">
+         <obj_property name="ElementShortName">icop_write</obj_property>
+         <obj_property name="ObjectShortName">icop_write</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/spram/ISP_DataWrStr" type="logic">
+         <obj_property name="ElementShortName">ISP_DataWrStr</obj_property>
+         <obj_property name="ObjectShortName">ISP_DataWrStr</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/spram/ISP_Addr" type="array">
+         <obj_property name="ElementShortName">ISP_Addr[19:2]</obj_property>
+         <obj_property name="ObjectShortName">ISP_Addr[19:2]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/spram/ISP_DataTagValue" type="array">
+         <obj_property name="ElementShortName">ISP_DataTagValue[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ISP_DataTagValue[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group262" type="group">
+      <obj_property name="label">ISPRAM-TagCompare</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/spram/icc_tagcmpdata" type="array">
+         <obj_property name="ElementShortName">icc_tagcmpdata[31:9]</obj_property>
+         <obj_property name="ObjectShortName">icc_tagcmpdata[31:9]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/spram/ISP_TagRdValue" type="array">
+         <obj_property name="ElementShortName">ISP_TagRdValue[23:0]</obj_property>
+         <obj_property name="ObjectShortName">ISP_TagRdValue[23:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/spram/spram_sel_raw" type="array">
+         <obj_property name="ElementShortName">spram_sel_raw[3:0]</obj_property>
+         <obj_property name="ObjectShortName">spram_sel_raw[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

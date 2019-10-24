@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_boot_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench_boot" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="100267000000fs"></ZoomStartTime>
+      <ZoomEndTime time="100355500001fs"></ZoomEndTime>
+      <Cursor1Time time="100315000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="8" />
+   <wave_markers>
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+   </wave_markers>
+   <wvobject fp_name="/testbench_boot/SI_ClkIn" type="logic">
+      <obj_property name="ElementShortName">SI_ClkIn</obj_property>
+      <obj_property name="ObjectShortName">SI_ClkIn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/edp_iva_i" type="array">
+      <obj_property name="ElementShortName">edp_iva_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">edp_iva_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/mpc/mpc_ir_e" type="array">
+      <obj_property name="ElementShortName">mpc_ir_e[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mpc_ir_e[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/dcc/dcc_dmiss_m" type="logic">
+      <obj_property name="ElementShortName">dcc_dmiss_m</obj_property>
+      <obj_property name="ObjectShortName">dcc_dmiss_m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/dreq_val" type="logic">
+      <obj_property name="ElementShortName">dreq_val</obj_property>
+      <obj_property name="ObjectShortName">dreq_val</obj_property>
+   </wvobject>
+   <wvobject fp_name="group14" type="group">
+      <obj_property name="label">ControlSignals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/dreq_st0" type="logic">
+         <obj_property name="ElementShortName">dreq_st0</obj_property>
+         <obj_property name="ObjectShortName">dreq_st0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/dreq_st1" type="logic">
+         <obj_property name="ElementShortName">dreq_st1</obj_property>
+         <obj_property name="ObjectShortName">dreq_st1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/dreq_st2" type="logic">
+         <obj_property name="ElementShortName">dreq_st2</obj_property>
+         <obj_property name="ObjectShortName">dreq_st2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/dreq_st3" type="logic">
+         <obj_property name="ElementShortName">dreq_st3</obj_property>
+         <obj_property name="ObjectShortName">dreq_st3</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/dreq" type="logic">
+         <obj_property name="ElementShortName">dreq</obj_property>
+         <obj_property name="ObjectShortName">dreq</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group28" type="group">
+      <obj_property name="label">RequestedAddresses</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/daddr" type="array">
+         <obj_property name="ElementShortName">daddr[35:0]</obj_property>
+         <obj_property name="ObjectShortName">daddr[35:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/dword_nxt" type="array">
+         <obj_property name="ElementShortName">dword_nxt[1:0]</obj_property>
+         <obj_property name="ObjectShortName">dword_nxt[1:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/burst_addr_nxt" type="array">
+         <obj_property name="ElementShortName">burst_addr_nxt[31:2]</obj_property>
+         <obj_property name="ObjectShortName">burst_addr_nxt[31:2]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/new_addr" type="logic">
+         <obj_property name="ElementShortName">new_addr</obj_property>
+         <obj_property name="ObjectShortName">new_addr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/HADDR" type="array">
+         <obj_property name="ElementShortName">HADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">HADDR[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/biu/HRDATA" type="array">
+      <obj_property name="ElementShortName">HRDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HRDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

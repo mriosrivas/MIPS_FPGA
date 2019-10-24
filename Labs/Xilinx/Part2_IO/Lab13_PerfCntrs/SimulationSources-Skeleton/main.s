@@ -1,0 +1,789 @@
+	.section .mdebug.abi32
+	.previous
+	.nan	legacy
+	.module	softfloat
+	.module	oddspreg
+	.text
+.Ltext0:
+	.cfi_sections	.debug_frame
+	.align	2
+	.globl	main
+.LFB0 = .
+	.file 1 "main.c"
+	.loc 1 38 0
+	.cfi_startproc
+	.set	nomips16
+	.set	nomicromips
+	.ent	main
+	.type	main, @function
+main:
+	.frame	$fp,32,$31		# vars= 8, regs= 2/0, args= 16, gp= 0
+	.mask	0xc0000000,-4
+	.fmask	0x00000000,0
+	addiu	$sp,$sp,-32
+	.cfi_def_cfa_offset 32
+	sw	$31,28($sp)
+	sw	$fp,24($sp)
+	.cfi_offset 31, -4
+	.cfi_offset 30, -8
+	move	$fp,$sp
+	.cfi_def_cfa_register 30
+.LBB2 = .
+	.loc 1 43 0
+	li	$2,2			# 0x2
+ #APP
+ # 43 "main.c" 1
+	.set push 
+.set noreorder
+mtc0 $2,$25,0
+ehb
+.set pop
+ # 0 "" 2
+ #NO_APP
+	li	$2,34			# 0x22
+ #APP
+ # 43 "main.c" 1
+	.set push 
+.set noreorder
+mtc0 $2,$25,2
+ehb
+.set pop
+ # 0 "" 2
+ # 43 "main.c" 1
+	.set push 
+.set noreorder
+mtc0 $0,$25,1
+ehb
+.set pop
+ # 0 "" 2
+ # 43 "main.c" 1
+	.set push 
+.set noreorder
+mtc0 $0,$25,3
+ehb
+.set pop
+ # 0 "" 2
+ #NO_APP
+.LBE2 = .
+.LBB3 = .
+.LBB4 = .
+	.loc 1 54 0
+ #APP
+ # 54 "main.c" 1
+	mfc0 $2,$25,1
+ # 0 "" 2
+ #NO_APP
+	move	$31,$2
+	move	$2,$31
+.LBE4 = .
+	sw	$2,16($fp)
+.LBB5 = .
+ #APP
+ # 54 "main.c" 1
+	mfc0 $2,$25,3
+ # 0 "" 2
+ #NO_APP
+	move	$31,$2
+	move	$2,$31
+.LBE5 = .
+	sw	$2,20($fp)
+ #APP
+ # 54 "main.c" 1
+	.set push 
+.set noreorder
+mtc0 $0,$25,0
+ehb
+.set pop
+ # 0 "" 2
+ # 54 "main.c" 1
+	.set push 
+.set noreorder
+mtc0 $0,$25,2
+ehb
+.set pop
+ # 0 "" 2
+ # 54 "main.c" 1
+	.set push 
+.set noreorder
+mtc0 $0,$25,1
+ehb
+.set pop
+ # 0 "" 2
+ # 54 "main.c" 1
+	.set push 
+.set noreorder
+mtc0 $0,$25,3
+ehb
+.set pop
+ # 0 "" 2
+ #NO_APP
+.L6:
+.LBE3 = .
+	.loc 1 60 0
+	li	$2,-1082130432			# 0xffffffffbf800000
+	ori	$2,$2,0x4
+	lw	$2,0($2)
+	beq	$2,$0,.L3
+	li	$3,1			# 0x1
+	beq	$2,$3,.L4
+	b	.L7
+.L3:
+	.loc 1 62 0
+	lw	$2,16($fp)
+	move	$4,$2
+	jal	writeValTo7Segs
+	.loc 1 63 0
+	b	.L5
+.L4:
+	.loc 1 65 0
+	lw	$2,20($fp)
+	move	$4,$2
+	jal	writeValTo7Segs
+	.loc 1 66 0
+	b	.L5
+.L7:
+	.loc 1 68 0
+	move	$4,$0
+	jal	writeValTo7Segs
+.L5:
+	.loc 1 70 0
+	b	.L6
+	.end	main
+	.cfi_endproc
+.LFE0:
+	.size	main, .-main
+	.align	2
+	.globl	writeValTo7Segs
+.LFB1 = .
+	.loc 1 77 0
+	.cfi_startproc
+	.set	nomips16
+	.set	nomicromips
+	.ent	writeValTo7Segs
+	.type	writeValTo7Segs, @function
+writeValTo7Segs:
+	.frame	$fp,24,$31		# vars= 16, regs= 1/0, args= 0, gp= 0
+	.mask	0x40000000,-4
+	.fmask	0x00000000,0
+	.set	noreorder
+	.set	nomacro
+	addiu	$sp,$sp,-24
+	.cfi_def_cfa_offset 24
+	sw	$fp,20($sp)
+	.cfi_offset 30, -4
+	move	$fp,$sp
+	.cfi_def_cfa_register 30
+	sw	$4,24($fp)
+	.loc 1 79 0
+	sw	$0,4($fp)
+	.loc 1 80 0
+	sw	$0,8($fp)
+	.loc 1 83 0
+	sw	$0,4($fp)
+	b	.L9
+	nop
+
+.L11:
+	.loc 1 84 0 discriminator 4
+	lw	$3,24($fp)
+	li	$2,-859045888			# 0xffffffffcccc0000
+	ori	$2,$2,0xcccd
+	multu	$3,$2
+	mfhi	$2
+	srl	$2,$2,3
+	sll	$2,$2,1
+	sll	$4,$2,2
+	addu	$2,$2,$4
+	subu	$2,$3,$2
+	sw	$2,0($fp)
+	.loc 1 85 0 discriminator 4
+	lw	$3,0($fp)
+	lw	$2,4($fp)
+	sll	$2,$2,2
+	sll	$2,$3,$2
+	move	$3,$2
+	lw	$2,8($fp)
+	or	$2,$3,$2
+	sw	$2,8($fp)
+	.loc 1 86 0 discriminator 4
+	lw	$3,24($fp)
+	li	$2,-859045888			# 0xffffffffcccc0000
+	ori	$2,$2,0xcccd
+	multu	$3,$2
+	mfhi	$2
+	srl	$2,$2,3
+	sw	$2,24($fp)
+	.loc 1 87 0 discriminator 4
+	lw	$2,4($fp)
+	li	$3,1			# 0x1
+	sll	$2,$3,$2
+	move	$3,$2
+	lw	$2,12($fp)
+	or	$2,$3,$2
+	sw	$2,12($fp)
+	.loc 1 83 0 discriminator 4
+	lw	$2,4($fp)
+	addiu	$2,$2,1
+	sw	$2,4($fp)
+.L9:
+	.loc 1 83 0 is_stmt 0 discriminator 1
+	lw	$2,24($fp)
+	beq	$2,$0,.L10
+	nop
+
+	.loc 1 83 0 discriminator 3
+	lw	$2,4($fp)
+	slt	$2,$2,8
+	bne	$2,$0,.L11
+	nop
+
+.L10:
+	.loc 1 90 0 is_stmt 1
+	li	$2,-1082130432			# 0xffffffffbf800000
+	ori	$2,$2,0x10
+	lw	$3,8($fp)
+	sw	$3,0($2)
+	.loc 1 91 0
+	li	$2,-1082130432			# 0xffffffffbf800000
+	ori	$2,$2,0xc
+	lw	$3,12($fp)
+	nor	$3,$0,$3
+	sw	$3,0($2)
+	.loc 1 93 0
+	nop
+	.loc 1 94 0
+	move	$sp,$fp
+	.cfi_def_cfa_register 29
+	lw	$fp,20($sp)
+	addiu	$sp,$sp,24
+	.cfi_restore 30
+	.cfi_def_cfa_offset 0
+	jr	$31
+	nop
+
+	.set	macro
+	.set	reorder
+	.end	writeValTo7Segs
+	.cfi_endproc
+.LFE1:
+	.size	writeValTo7Segs, .-writeValTo7Segs
+	.align	2
+	.globl	_mips_handle_exception
+.LFB2 = .
+	.loc 1 98 0
+	.cfi_startproc
+	.set	nomips16
+	.set	nomicromips
+	.ent	_mips_handle_exception
+	.type	_mips_handle_exception, @function
+_mips_handle_exception:
+	.frame	$fp,8,$31		# vars= 0, regs= 1/0, args= 0, gp= 0
+	.mask	0x40000000,-4
+	.fmask	0x00000000,0
+	.set	noreorder
+	.set	nomacro
+	addiu	$sp,$sp,-8
+	.cfi_def_cfa_offset 8
+	sw	$fp,4($sp)
+	.cfi_offset 30, -4
+	move	$fp,$sp
+	.cfi_def_cfa_register 30
+	sw	$4,8($fp)
+	sw	$5,12($fp)
+	.loc 1 99 0
+	li	$2,-1082130432			# 0xffffffffbf800000
+	li	$3,32769			# 0x8001
+	sw	$3,0($2)
+.L14:
+	.loc 1 100 0 discriminator 1
+	b	.L14
+	nop
+
+	.set	macro
+	.set	reorder
+	.end	_mips_handle_exception
+	.cfi_endproc
+.LFE2:
+	.size	_mips_handle_exception, .-_mips_handle_exception
+.Letext0:
+	.file 2 "c:\\progra~1\\imagin~1\\toolch~1\\mips-mti-elf\\2016.05-03\\mips-mti-elf\\include\\mips\\m32c0.h"
+	.section	.debug_info,"",@progbits
+.Ldebug_info0:
+	.4byte	0x168
+	.2byte	0x4
+	.4byte	.Ldebug_abbrev0
+	.byte	0x4
+	.uleb128 0x1
+	.4byte	.LASF15
+	.byte	0x1
+	.4byte	.LASF16
+	.4byte	.LASF17
+	.4byte	.Ltext0
+	.4byte	.Letext0-.Ltext0
+	.4byte	.Ldebug_line0
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF0
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF1
+	.uleb128 0x3
+	.4byte	.LASF5
+	.byte	0x2
+	.2byte	0x393
+	.4byte	0x2c
+	.uleb128 0x2
+	.byte	0x8
+	.byte	0x7
+	.4byte	.LASF2
+	.uleb128 0x4
+	.byte	0x4
+	.byte	0x5
+	.ascii	"int\000"
+	.uleb128 0x5
+	.byte	0x8
+	.byte	0x1
+	.byte	0x1c
+	.4byte	0x6e
+	.uleb128 0x6
+	.4byte	.LASF3
+	.byte	0x1
+	.byte	0x1e
+	.4byte	0x2c
+	.byte	0
+	.uleb128 0x6
+	.4byte	.LASF4
+	.byte	0x1
+	.byte	0x1f
+	.4byte	0x2c
+	.byte	0x4
+	.byte	0
+	.uleb128 0x7
+	.4byte	.LASF6
+	.byte	0x1
+	.byte	0x21
+	.4byte	0x4d
+	.uleb128 0x8
+	.4byte	.LASF8
+	.byte	0x1
+	.byte	0x26
+	.4byte	0x46
+	.4byte	.LFB0
+	.4byte	.LFE0-.LFB0
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0xd3
+	.uleb128 0x9
+	.4byte	.LASF7
+	.byte	0x1
+	.byte	0x28
+	.4byte	0x6e
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 -16
+	.uleb128 0xa
+	.4byte	.LBB4
+	.4byte	.LBE4-.LBB4
+	.4byte	0xbb
+	.uleb128 0xb
+	.ascii	"__r\000"
+	.byte	0x1
+	.byte	0x36
+	.4byte	0x25
+	.uleb128 0x1
+	.byte	0x6f
+	.byte	0
+	.uleb128 0xc
+	.4byte	.LBB5
+	.4byte	.LBE5-.LBB5
+	.uleb128 0xb
+	.ascii	"__r\000"
+	.byte	0x1
+	.byte	0x36
+	.4byte	0x25
+	.uleb128 0x1
+	.byte	0x6f
+	.byte	0
+	.byte	0
+	.uleb128 0xd
+	.4byte	.LASF9
+	.byte	0x1
+	.byte	0x4d
+	.4byte	.LFB1
+	.4byte	.LFE1-.LFB1
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0x12d
+	.uleb128 0xe
+	.ascii	"val\000"
+	.byte	0x1
+	.byte	0x4d
+	.4byte	0x2c
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.uleb128 0x9
+	.4byte	.LASF10
+	.byte	0x1
+	.byte	0x4f
+	.4byte	0x12d
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 -24
+	.uleb128 0xb
+	.ascii	"i\000"
+	.byte	0x1
+	.byte	0x4f
+	.4byte	0x12d
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 -20
+	.uleb128 0x9
+	.4byte	.LASF11
+	.byte	0x1
+	.byte	0x50
+	.4byte	0x132
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 -16
+	.uleb128 0x9
+	.4byte	.LASF12
+	.byte	0x1
+	.byte	0x50
+	.4byte	0x132
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 -12
+	.byte	0
+	.uleb128 0xf
+	.4byte	0x46
+	.uleb128 0xf
+	.4byte	0x2c
+	.uleb128 0xd
+	.4byte	.LASF13
+	.byte	0x1
+	.byte	0x62
+	.4byte	.LFB2
+	.4byte	.LFE2-.LFB2
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0x169
+	.uleb128 0xe
+	.ascii	"ctx\000"
+	.byte	0x1
+	.byte	0x62
+	.4byte	0x169
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.uleb128 0x10
+	.4byte	.LASF14
+	.byte	0x1
+	.byte	0x62
+	.4byte	0x46
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 4
+	.byte	0
+	.uleb128 0x11
+	.byte	0x4
+	.byte	0
+	.section	.debug_abbrev,"",@progbits
+.Ldebug_abbrev0:
+	.uleb128 0x1
+	.uleb128 0x11
+	.byte	0x1
+	.uleb128 0x25
+	.uleb128 0xe
+	.uleb128 0x13
+	.uleb128 0xb
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x1b
+	.uleb128 0xe
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x10
+	.uleb128 0x17
+	.byte	0
+	.byte	0
+	.uleb128 0x2
+	.uleb128 0x24
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3e
+	.uleb128 0xb
+	.uleb128 0x3
+	.uleb128 0xe
+	.byte	0
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x16
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x4
+	.uleb128 0x24
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3e
+	.uleb128 0xb
+	.uleb128 0x3
+	.uleb128 0x8
+	.byte	0
+	.byte	0
+	.uleb128 0x5
+	.uleb128 0x13
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x6
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x7
+	.uleb128 0x16
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x8
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2116
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x9
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0xa
+	.uleb128 0xb
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0xc
+	.uleb128 0xb
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.byte	0
+	.byte	0
+	.uleb128 0xd
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0x19
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0xf
+	.uleb128 0x35
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x10
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uleb128 0xf
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.byte	0
+	.section	.debug_aranges,"",@progbits
+	.4byte	0x1c
+	.2byte	0x2
+	.4byte	.Ldebug_info0
+	.byte	0x4
+	.byte	0
+	.2byte	0
+	.2byte	0
+	.4byte	.Ltext0
+	.4byte	.Letext0-.Ltext0
+	.4byte	0
+	.4byte	0
+	.section	.debug_line,"",@progbits
+.Ldebug_line0:
+	.section	.debug_str,"MS",@progbits,1
+.LASF1:
+	.ascii	"unsigned int\000"
+.LASF15:
+	.ascii	"GNU C 4.9.2 -mel -march=m14kc -msoft-float -mplt -mips32"
+	.ascii	"r2 -msynci -mabi=32 -g\000"
+.LASF4:
+	.ascii	"event2\000"
+.LASF16:
+	.ascii	"main.c\000"
+.LASF6:
+	.ascii	"test_result_t\000"
+.LASF17:
+	.ascii	"C:\\Users\\Dani\\Google Drive\\Imagination\\MFP2.0_8Marc"
+	.ascii	"h2017\\MIPSfpga_Labs\\Labs\\Xilinx\\Part2_IO\\Lab13_Perf"
+	.ascii	"Cntrs\\SimulationSources-Skeleton\000"
+.LASF3:
+	.ascii	"event1\000"
+.LASF0:
+	.ascii	"long unsigned int\000"
+.LASF2:
+	.ascii	"long long unsigned int\000"
+.LASF5:
+	.ascii	"reg32_t\000"
+.LASF12:
+	.ascii	"enDigits\000"
+.LASF8:
+	.ascii	"main\000"
+.LASF11:
+	.ascii	"allDigits\000"
+.LASF13:
+	.ascii	"_mips_handle_exception\000"
+.LASF14:
+	.ascii	"reason\000"
+.LASF9:
+	.ascii	"writeValTo7Segs\000"
+.LASF10:
+	.ascii	"digit\000"
+.LASF7:
+	.ascii	"test_result\000"
+	.ident	"GCC: (Codescape GNU Tools 2016.05-03 for MIPS MTI Bare Metal) 4.9.2"

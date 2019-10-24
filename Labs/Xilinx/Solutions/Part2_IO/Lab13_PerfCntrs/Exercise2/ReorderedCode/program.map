@@ -1,0 +1,409 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_putchar.o)
+                              main.o (fdc_init)
+C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_printf.o)
+                              main.o (fdc_printf)
+
+Allocating common symbols
+Common symbol       size              file
+
+V                   0xfa0             main.o
+Addition            0x4               main.o
+
+Discarded input sections
+
+ .reginfo       0x0000000000000000       0x18 boot.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 boot.o
+ .reginfo       0x0000000000000000       0x18 exceptions.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 exceptions.o
+ .reginfo       0x0000000000000000       0x18 dummy.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 dummy.o
+ .reginfo       0x0000000000000000       0x18 main.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 main.o
+ .reginfo       0x0000000000000000       0x18 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_putchar.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_putchar.o)
+ .reginfo       0x0000000000000000       0x18 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_printf.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_printf.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD crt0.o
+                0x0000000080040000                __stack = 0x80040000
+                0x000000000001f800                __memory_size = 0x1f800
+                0x00000000bfc00000                __flash_start = 0xbfc00000
+                0x0000000080000000                __flash_app_start = 0x80000000
+                0x0000000080000000                __app_start = 0x80000000
+                0x0000000000000000                __isr_vec_count = 0x0
+LOAD boot.o
+LOAD exceptions.o
+LOAD dummy.o
+LOAD main.o
+LOAD C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a
+LOAD c:/progra~1/imagin~1/toolch~1/mips-mti-elf/2016.05-03/bin/../lib/gcc/mips-mti-elf/4.9.2/mipsel-r2-soft-newlib/lib\libgcc.a
+LOAD c:/progra~1/imagin~1/toolch~1/mips-mti-elf/2016.05-03/bin/../lib/gcc/mips-mti-elf/4.9.2/mipsel-r2-soft-newlib/lib\libgcc.a
+                0x00000000bfc00000                __entry = DEFINED (__reset_vector)?0xbfc00000:_start
+START GROUP
+LOAD c:/progra~1/imagin~1/toolch~1/mips-mti-elf/2016.05-03/bin/../lib/gcc/mips-mti-elf/4.9.2/../../../../mips-mti-elf/lib/mipsel-r2-soft-newlib/lib\libc.a
+LOAD c:/progra~1/imagin~1/toolch~1/mips-mti-elf/2016.05-03/bin/../lib/gcc/mips-mti-elf/4.9.2/../../../../mips-mti-elf/lib/mipsel-r2-soft-newlib/lib\libuhi.a
+LOAD c:/progra~1/imagin~1/toolch~1/mips-mti-elf/2016.05-03/bin/../lib/gcc/mips-mti-elf/4.9.2/mipsel-r2-soft-newlib/lib\libgcc.a
+LOAD c:/progra~1/imagin~1/toolch~1/mips-mti-elf/2016.05-03/bin/../lib/gcc/mips-mti-elf/4.9.2/../../../../mips-mti-elf/lib/mipsel-r2-soft-newlib/lib\libhal.a
+END GROUP
+                0x0000000000000000                __DYNAMIC = 0x0
+                0x0000000000000000                PROVIDE (__stack, 0x0)
+                0x0000000000300000                PROVIDE (__memory_size, 0x300000)
+                0x0000000080000000                PROVIDE (__memory_base, 0x80000000)
+                0x0000000000000001                PROVIDE (__tlb_stride_length, 0x1)
+                0x0000000000000000                PROVIDE (__enable_xpa, 0x0)
+                0x0000000000000001                PROVIDE (__use_excpt_boot, 0x1)
+                0x0000000000000001                ASSERT ((DEFINED (__register_excpt_boot) || (__use_excpt_boot == 0x0)), Registration for boot context is required for UHI chaining)
+                0x0000000000000001                PROVIDE (__flush_to_zero, 0x1)
+                0x0000000080000200                PROVIDE (__exception_handle, DEFINED (__exception_handle_quiet)?__exception_handle_quiet:__exception_handle_verbose)
+                0x0000000080000200                PROVIDE (_mips_handle_exception, __exception_handle)
+                0x0000000000000000                PROVIDE (hardware_exit_hook, 0x0)
+                0x0000000000000000                PROVIDE (hardware_hazard_hook, 0x0)
+                0x0000000000000000                PROVIDE (hardware_init_hook, 0x0)
+                0x0000000000000000                PROVIDE (software_init_hook, 0x0)
+                0x0000000080000000                PROVIDE (__app_start, DEFINED (__reset_vector)?0x80000000:0x80200000)
+                0x0000000000000020                PROVIDE (__isr_vec_space, 0x20)
+                0x0000000000000009                PROVIDE (__isr_vec_count, 0x9)
+                0x00000000bfc00000                PROVIDE (__flash_start, DEFINED (__reset_vector)?0xbfc00000:__app_start)
+
+.bootrom        0x000000009fc00000      0x1b8 load address 0x00000000bfc00000
+ *(.reset)
+ .reset         0x000000009fc00000      0x144 boot.o
+                0x000000009fc00000                __reset_vector
+ *(.boot)
+ .boot          0x000000009fc00144       0x70 crt0.o
+                0x000000009fc00144                _start
+                0x000000009fc001b8                . = ALIGN (0x8)
+ *fill*         0x000000009fc001b4        0x4 00000000
+                0x00000000bfc001b8                PROVIDE (__flash_app_start, (SIZEOF (.bootrom) + __flash_start))
+
+.exception_vector
+                0x0000000080000000      0x200
+                0x0000000080000000                __excpt_ebase = ABSOLUTE (.)
+                0x0000000080000000                __base = .
+ *(.text.__exception_entry)
+ .text.__exception_entry
+                0x0000000080000000      0x198 exceptions.o
+                0x0000000080000000                __exception_entry
+                0x0000000080000200                . = (__base + 0x200)
+ *fill*         0x0000000080000198       0x68 00000000
+ *(SORT(.text.__isr_vec*))
+                0x0000000080000200                . = ((__base + 0x200) + (__isr_vec_space * __isr_vec_count))
+                0x0000000000000001                ASSERT ((__isr_vec_space == DEFINED (__isr_vec_sw0)?(__isr_vec_sw1 - __isr_vec_sw0):__isr_vec_space), Actual ISR vector spacing does not match __isr_vec_space)
+                0x0000000000000001                ASSERT (((__base + 0x200) == DEFINED (__isr_vec_sw0)?(__isr_vec_sw0 & 0xfffffffe):(__base + 0x200)), __isr_vec_sw0 is not placed at EBASE + 0x200)
+                0x0000000080000200                . = ALIGN (0x8)
+
+.text           0x0000000080000200      0xf34
+                0x0000000080000200                _ftext = .
+                0x0000000080000200                PROVIDE (eprol, .)
+ *(.text)
+ .text          0x0000000080000200        0x0 crt0.o
+ .text          0x0000000080000200        0x0 boot.o
+ .text          0x0000000080000200        0x0 exceptions.o
+ .text          0x0000000080000200        0x4 dummy.o
+                0x0000000080000200                __register_excpt_boot
+                0x0000000080000200                __register_excpt_handler
+                0x0000000080000200                __getargs
+                0x0000000080000200                __isr_vec
+                0x0000000080000200                __exception_handle_verbose
+ .text          0x0000000080000204      0x2b8 main.o
+                0x0000000080000204                main
+                0x0000000080000388                writeValTo7Segs
+                0x0000000080000494                _mips_handle_exception
+ .text          0x00000000800004bc      0x248 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_putchar.o)
+                0x00000000800004bc                ReadConfig3
+                0x00000000800004c4                WriteCDMMBase
+                0x00000000800004cc                ReadCause
+                0x00000000800004d4                ReadCount
+                0x00000000800004dc                fdc_hw_find_base_addr
+                0x000000008000055c                fdc_init
+                0x0000000080000624                fdc_putchar
+ .text          0x0000000080000704      0xa30 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_printf.o)
+                0x000000008000070c                fdc_printchar
+                0x0000000080000734                fdc_prints
+                0x00000000800008a0                fdc_printi
+                0x0000000080000c64                fdc_print
+                0x00000000800010b0                fdc_printf
+                0x00000000800010f8                fdc_flush
+                0x0000000080001100                fdc_sprintf
+ *(.text.*)
+ *(.gnu.linkonce.t.*)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+
+.init
+ *(.init)
+
+.fini
+ *(.fini)
+
+.rel.sdata      0x0000000080001134        0x0
+                0x0000000080001134                PROVIDE (__runtime_reloc_start, .)
+ *(.rel.sdata)
+                0x0000000080001134                PROVIDE (__runtime_reloc_stop, .)
+                0x0000000080001134                PROVIDE (etext, .)
+                0x0000000080001134                _etext = .
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.jcr
+ *(.jcr)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x0000000080001134                . = .
+
+.MIPS.abiflags  0x0000000080001138       0x18
+                0x0000000080001138                __MIPS_abiflags_start = .
+ *(.MIPS.abiflags)
+ .MIPS.abiflags
+                0x0000000080001138       0x18 crt0.o
+                0x0000000080001150                __MIPS_abiflags_end = .
+
+.rodata         0x0000000080001150       0x18
+ *(.rdata)
+ *(.rodata)
+ .rodata        0x0000000080001150       0x10 main.o
+ *(.rodata.*)
+ .rodata.str1.4
+                0x0000000080001160        0x8 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_printf.o)
+ *(.gnu.linkonce.r.*)
+                0x0000000080001170                . = ALIGN (0x10)
+                0x0000000080001170                _fdata = .
+
+.data           0x0000000080001170        0x0
+ *(.data)
+ .data          0x0000000080001170        0x0 crt0.o
+ .data          0x0000000080001170        0x0 boot.o
+ .data          0x0000000080001170        0x0 exceptions.o
+ .data          0x0000000080001170        0x0 dummy.o
+ .data          0x0000000080001170        0x0 main.o
+ .data          0x0000000080001170        0x0 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_putchar.o)
+ .data          0x0000000080001170        0x0 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_printf.o)
+ *(.data.*)
+ *(.gnu.linkonce.d.*)
+                0x0000000080001170                . = ALIGN (0x8)
+                0x0000000080009170                _gp = (. + 0x8000)
+                0x0000000080009170                __global = _gp
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+
+.sdata
+ *(.sdata)
+ *(.sdata.*)
+ *(.gnu.linkonce.s.*)
+                0x0000000080001170                . = ALIGN (0x4)
+                0x0000000080001170                PROVIDE (edata, .)
+                0x0000000080001170                _edata = .
+                0x0000000080001170                _fbss = .
+
+.sbss           0x0000000080001170       0x20
+ *(.sbss)
+ .sbss          0x0000000080001170       0x1c C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_putchar.o)
+ *(.sbss.*)
+ *(.gnu.linkonce.sb.*)
+ *(.scommon)
+ .scommon       0x000000008000118c        0x4 main.o
+                0x000000008000118c                Addition
+
+.bss            0x0000000080001190      0xfa0
+                0x0000000080001190                _bss_start = .
+ *(.bss)
+ .bss           0x0000000080001190        0x0 crt0.o
+ .bss           0x0000000080001190        0x0 boot.o
+ .bss           0x0000000080001190        0x0 exceptions.o
+ .bss           0x0000000080001190        0x0 dummy.o
+ .bss           0x0000000080001190        0x0 main.o
+ .bss           0x0000000080001190        0x0 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_putchar.o)
+ .bss           0x0000000080001190        0x0 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_printf.o)
+ *(.bss.*)
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+ COMMON         0x0000000080001190      0xfa0 main.o
+                0x0000000080001190                V
+                0x0000000080002130                . = ALIGN (0x4)
+                0x0000000080002130                PROVIDE (end, .)
+                0x0000000080002130                _end = .
+
+.startdata
+ *(.startdata)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0xa0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 crt0.o
+ .debug_aranges
+                0x0000000000000020       0x20 boot.o
+ .debug_aranges
+                0x0000000000000040       0x20 exceptions.o
+ .debug_aranges
+                0x0000000000000060       0x20 dummy.o
+ .debug_aranges
+                0x0000000000000080       0x20 main.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000      0x37c
+ *(.debug_info)
+ .debug_info    0x0000000000000000       0x6c crt0.o
+ .debug_info    0x000000000000006c       0x6c boot.o
+ .debug_info    0x00000000000000d8       0x72 exceptions.o
+ .debug_info    0x000000000000014a       0x6d dummy.o
+ .debug_info    0x00000000000001b7      0x1c5 main.o
+
+.debug_abbrev   0x0000000000000000      0x176
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x14 crt0.o
+ .debug_abbrev  0x0000000000000014       0x14 boot.o
+ .debug_abbrev  0x0000000000000028       0x14 exceptions.o
+ .debug_abbrev  0x000000000000003c       0x14 dummy.o
+ .debug_abbrev  0x0000000000000050      0x126 main.o
+
+.debug_line     0x0000000000000000      0x246
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x48 crt0.o
+ .debug_line    0x0000000000000048       0x86 boot.o
+ .debug_line    0x00000000000000ce       0x4d exceptions.o
+ .debug_line    0x000000000000011b       0x37 dummy.o
+ .debug_line    0x0000000000000152       0xf4 main.o
+
+.debug_frame    0x0000000000000000       0x6c
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x6c main.o
+
+.debug_str      0x0000000000000000      0x162
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x162 main.o
+                                        0x181 (size before relaxing)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.mdebug.abi32   0x0000000000000000        0x0
+ *(.mdebug.abi32)
+ .mdebug.abi32  0x0000000000000000        0x0 main.o
+ .mdebug.abi32  0x0000000000000000        0x0 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_putchar.o)
+ .mdebug.abi32  0x0000000000000000        0x0 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_printf.o)
+
+.mdebug.abiN32
+ *(.mdebug.abiN32)
+
+.mdebug.abi64
+ *(.mdebug.abi64)
+
+.mdebug.abiO64
+ *(.mdebug.abiO64)
+
+.mdebug.eabi32
+ *(.mdebug.eabi32)
+
+.mdebug.eabi64
+ *(.mdebug.eabi64)
+
+.gcc_compiled_long32
+ *(.gcc_compiled_long32)
+
+.gcc_compiled_long64
+ *(.gcc_compiled_long64)
+OUTPUT(program.elf elf32-tradlittlemips)
+
+.reginfo        0x0000000000000000       0x18
+ .reginfo       0x0000000000000000       0x18 crt0.o
+
+.pdr            0x0000000000000000      0x340
+ .pdr           0x0000000000000000       0x20 crt0.o
+ .pdr           0x0000000000000020       0x20 boot.o
+ .pdr           0x0000000000000040       0x20 exceptions.o
+ .pdr           0x0000000000000060       0xa0 dummy.o
+ .pdr           0x0000000000000100       0x60 main.o
+ .pdr           0x0000000000000160       0xe0 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_putchar.o)
+ .pdr           0x0000000000000240      0x100 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_printf.o)
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ .gnu.attributes
+                0x0000000000000000       0x10 crt0.o
+ .gnu.attributes
+                0x0000000000000010       0x10 boot.o
+ .gnu.attributes
+                0x0000000000000020       0x10 exceptions.o
+ .gnu.attributes
+                0x0000000000000030       0x10 dummy.o
+ .gnu.attributes
+                0x0000000000000040       0x10 main.o
+ .gnu.attributes
+                0x0000000000000050       0x10 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_putchar.o)
+ .gnu.attributes
+                0x0000000000000060       0x10 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_printf.o)
+
+.comment        0x0000000000000000       0x88
+ .comment       0x0000000000000000       0x44 main.o
+                                         0x45 (size before relaxing)
+ .comment       0x0000000000000044       0x44 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_putchar.o)
+                                         0x45 (size before relaxing)
+ .comment       0x0000000000000088       0x45 C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a(fdc_printf.o)

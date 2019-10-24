@@ -1,0 +1,1559 @@
+
+program.elf:     file format elf32-tradlittlemips
+
+SYMBOL TABLE:
+9fc00000 l    d  .bootrom	00000000 .bootrom
+80000000 l    d  .exception_vector	00000000 .exception_vector
+80000200 l    d  .text	00000000 .text
+80000740 l    d  .rodata	00000000 .rodata
+80000760 l    d  .bss	00000000 .bss
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .mdebug.abi32	00000000 .mdebug.abi32
+00000000 l    d  .pdr	00000000 .pdr
+00000000 l    d  .gnu.attributes	00000000 .gnu.attributes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    df *ABS*	00000000 boot.o
+9fc00004 l       .bootrom	00000000 init_cp0
+9fc00018 l       .bootrom	00000000 init_tlb
+9fc00060 l       .bootrom	00000000 init_icache
+9fc00044 l       .bootrom	00000000 next_tlb_entry
+9fc000ac l       .bootrom	00000000 done_icache
+9fc0009c l       .bootrom	00000000 next_icache_tag
+9fc000ac l       .bootrom	00000000 enable_k0_cache
+9fc000cc l       .bootrom	00000000 init_dcache
+9fc0011c l       .bootrom	00000000 done_dcache
+9fc0010c l       .bootrom	00000000 next_dcache_tag
+9fc0013c l       .bootrom	00000000 all_done
+00000000 l    df *ABS*	00000000 exceptions.o
+80000000 l       .exception_vector	00000000 __tlb_refill_loop
+80000080 l       .exception_vector	00000000 __xtlb_refill_loop
+80000100 l       .exception_vector	00000000 __cache_error_loop
+80000180 l       .exception_vector	00000000 __general_exception_loop
+00000000 l    df *ABS*	00000000 main.c
+800002e8 l       .text	00000000 loop1
+80000760 g       .bss	00000000 _fdata
+80000200  w    F .text	00000000 __exception_handle_verbose
+80000760 g     O .bss	00001000 x
+80000728 g       .text	00000000 _etext
+80008760 g       *ABS*	00000000 _gp
+00000020 g       *ABS*	00000000 __isr_vec_space
+80000760 g       .bss	00000000 _bss_start
+00000000 g       *ABS*	00000000 __DYNAMIC
+00000001 g       *ABS*	00000000 __use_excpt_boot
+00000000  w      *UND*	00000000 _mips_xtlb_refill
+80000700 g     F .text	00000028 _mips_handle_exception
+80000200  w    F .text	00000000 __register_excpt_boot
+80001760 g     O .bss	00001000 z
+80000200  w    F .text	00000000 __register_excpt_handler
+80000000 g       *ABS*	00000000 __app_start
+80000000 g       *ABS*	00000000 __flash_app_start
+80000200 g       .text	00000000 _ftext
+9fc00144 g     F .bootrom	00000070 _start
+800005f4 g     F .text	0000010c writeValTo7Segs
+80000000 g       *ABS*	00000000 __excpt_ebase
+80000204 g     F .text	000003f0 main
+80002760 g     O .bss	00001000 y
+80000200 g     F .text	00000000 __exception_handle
+bfc00000 g       *ABS*	00000000 __entry
+80000200  w    F .text	00000004 __getargs
+00000000  w      *UND*	00000000 _mips_general_exception
+00000000  w      *UND*	00000000 _mips_tlb_refill
+00000000  w      *UND*	00000000 _mips_cache_error
+80040000 g       *ABS*	00000000 __stack
+80000000 g     F .exception_vector	00000198 __exception_entry
+80000000 g       .exception_vector	00000000 __base
+80000760 g       .bss	00000000 _edata
+bfc00000 g       *ABS*	00000000 __flash_start
+80003760 g       .bss	00000000 _end
+9fc00000 g     F .bootrom	00000144 __reset_vector
+0001f800 g       *ABS*	00000000 __memory_size
+80008760 g       *ABS*	00000000 __global
+80000200  w    F .text	00000000 __isr_vec
+00000000 g       *ABS*	00000000 __isr_vec_count
+80000760 g       .bss	00000000 _fbss
+
+
+
+Disassembly of section .bootrom:
+
+9fc00000 <__reset_vector>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:20
+9fc00000:	40804800 	mtc0	zero,c0_count
+
+9fc00004 <init_cp0>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:27
+9fc00004:	3c030040 	lui	v1,0x40
+9fc00008:	34630004 	ori	v1,v1,0x4
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:28
+9fc0000c:	40836000 	mtc0	v1,c0_status
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:31
+9fc00010:	40806800 	mtc0	zero,c0_cause
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:34
+9fc00014:	40805800 	mtc0	zero,c0_compare
+
+9fc00018 <init_tlb>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:44
+9fc00018:	40038000 	mfc0	v1,c0_config
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:45
+9fc0001c:	7c6311c0 	ext	v1,v1,0x7,0x3
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:46
+9fc00020:	24070001 	li	a3,1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:47
+9fc00024:	1467000e 	bne	v1,a3,9fc00060 <init_icache>
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:50
+9fc00028:	40028001 	mfc0	v0,c0_config1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:51
+9fc0002c:	7c432e40 	ext	v1,v0,0x19,0x6
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:52
+9fc00030:	40801000 	mtc0	zero,c0_entrylo0
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:53
+9fc00034:	40801800 	mtc0	zero,c0_entrylo1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:54
+9fc00038:	40802800 	mtc0	zero,c0_pagemask
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:55
+9fc0003c:	40803000 	mtc0	zero,c0_wired
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:56
+9fc00040:	3c048000 	lui	a0,0x8000
+
+9fc00044 <next_tlb_entry>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:59
+9fc00044:	40830000 	mtc0	v1,c0_index
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:60
+9fc00048:	40845000 	mtc0	a0,c0_entryhi
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:61
+9fc0004c:	000000c0 	ehb
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:62
+9fc00050:	42000002 	tlbwi
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:63
+9fc00054:	20844000 	addi	a0,a0,16384
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:65
+9fc00058:	1460fffa 	bnez	v1,9fc00044 <next_tlb_entry>
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:66
+9fc0005c:	2063ffff 	addi	v1,v1,-1
+
+9fc00060 <init_icache>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:73
+9fc00060:	40028001 	mfc0	v0,c0_config1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:74
+9fc00064:	7c4314c0 	ext	v1,v0,0x13,0x3
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:75
+9fc00068:	10600010 	beqz	v1,9fc000ac <done_icache>
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:76
+9fc0006c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:78
+9fc00070:	24060002 	li	a2,2
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:79
+9fc00074:	00661804 	sllv	v1,a2,v1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:81
+9fc00078:	7c441580 	ext	a0,v0,0x16,0x3
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:82
+9fc0007c:	24060040 	li	a2,64
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:83
+9fc00080:	00862004 	sllv	a0,a2,a0
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:85
+9fc00084:	7c451400 	ext	a1,v0,0x10,0x3
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:86
+9fc00088:	20a50001 	addi	a1,a1,1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:87
+9fc0008c:	70852002 	mul	a0,a0,a1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:88
+9fc00090:	3c068000 	lui	a2,0x8000
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:90
+9fc00094:	4080e000 	mtc0	zero,c0_taglo
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:91
+9fc00098:	00803825 	move	a3,a0
+
+9fc0009c <next_icache_tag>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:96
+9fc0009c:	bcc80000 	cache	0x8,0(a2)
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:97
+9fc000a0:	20e7ffff 	addi	a3,a3,-1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:98
+9fc000a4:	14e0fffd 	bnez	a3,9fc0009c <next_icache_tag>
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:99
+9fc000a8:	00c33020 	add	a2,a2,v1
+
+9fc000ac <done_icache>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:111
+9fc000ac:	40028000 	mfc0	v0,c0_config
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:112
+9fc000b0:	24030003 	li	v1,3
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:113
+9fc000b4:	7c621004 	ins	v0,v1,0x0,0x3
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:114
+9fc000b8:	40828000 	mtc0	v0,c0_config
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:116
+9fc000bc:	3c069fc0 	lui	a2,0x9fc0
+9fc000c0:	24c600cc 	addiu	a2,a2,204
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:117
+9fc000c4:	00c00008 	jr	a2
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:118
+9fc000c8:	000000c0 	ehb
+
+9fc000cc <init_dcache>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:124
+9fc000cc:	40028001 	mfc0	v0,c0_config1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:125
+9fc000d0:	7c431280 	ext	v1,v0,0xa,0x3
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:126
+9fc000d4:	10600011 	beqz	v1,9fc0011c <done_dcache>
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:127
+9fc000d8:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:129
+9fc000dc:	24060002 	li	a2,2
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:130
+9fc000e0:	00661804 	sllv	v1,a2,v1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:132
+9fc000e4:	7c441340 	ext	a0,v0,0xd,0x3
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:133
+9fc000e8:	24060040 	li	a2,64
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:134
+9fc000ec:	00862004 	sllv	a0,a2,a0
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:136
+9fc000f0:	7c4511c0 	ext	a1,v0,0x7,0x3
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:137
+9fc000f4:	20a50001 	addi	a1,a1,1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:138
+9fc000f8:	70852002 	mul	a0,a0,a1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:139
+9fc000fc:	3c068000 	lui	a2,0x8000
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:141
+9fc00100:	4080e000 	mtc0	zero,c0_taglo
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:142
+9fc00104:	4080e002 	mtc0	zero,c0_taglo1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:143
+9fc00108:	00803825 	move	a3,a0
+
+9fc0010c <next_dcache_tag>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:148
+9fc0010c:	bcc90000 	cache	0x9,0(a2)
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:149
+9fc00110:	20e7ffff 	addi	a3,a3,-1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:150
+9fc00114:	14e0fffd 	bnez	a3,9fc0010c <next_dcache_tag>
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:151
+9fc00118:	00c33020 	add	a2,a2,v1
+
+9fc0011c <done_dcache>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:156
+9fc0011c:	3c1f9fc0 	lui	ra,0x9fc0
+9fc00120:	27ff013c 	addiu	ra,ra,316
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:157
+9fc00124:	00002025 	move	a0,zero
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:159
+9fc00128:	3c029fc0 	lui	v0,0x9fc0
+9fc0012c:	24420144 	addiu	v0,v0,324
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:160
+9fc00130:	4082f000 	mtc0	v0,c0_errorepc
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:161
+9fc00134:	000000c0 	ehb
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:165
+9fc00138:	42000018 	eret
+
+9fc0013c <all_done>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:171
+9fc0013c:	1000ffff 	b	9fc0013c <all_done>
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/boot.S:172
+9fc00140:	00000000 	nop
+
+9fc00144 <_start>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:16
+9fc00144:	03e08025 	move	s0,ra
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:18
+9fc00148:	3c1c8001 	lui	gp,0x8001
+9fc0014c:	279c8760 	addiu	gp,gp,-30880
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:20
+9fc00150:	3c1d8004 	lui	sp,0x8004
+9fc00154:	27bd0000 	addiu	sp,sp,0
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:22
+9fc00158:	3c028000 	lui	v0,0x8000
+9fc0015c:	24420760 	addiu	v0,v0,1888
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:23
+9fc00160:	3c038000 	lui	v1,0x8000
+9fc00164:	24633760 	addiu	v1,v1,14176
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:24
+9fc00168:	10430005 	beq	v0,v1,9fc00180 <_start+0x3c>
+9fc0016c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:26
+9fc00170:	24420004 	addiu	v0,v0,4
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:27
+9fc00174:	ac40fffc 	sw	zero,-4(v0)
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:28
+9fc00178:	1443fffd 	bne	v0,v1,9fc00170 <_start+0x2c>
+9fc0017c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:31
+9fc00180:	24040000 	li	a0,0
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:33
+9fc00184:	27bdfff0 	addiu	sp,sp,-16
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:37
+9fc00188:	40026000 	mfc0	v0,c0_status
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:38
+9fc0018c:	7c02b584 	ins	v0,zero,0x16,0x1
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:39
+9fc00190:	40826000 	mtc0	v0,c0_status
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:40
+9fc00194:	000000c0 	ehb
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:43
+9fc00198:	3c088000 	lui	t0,0x8000
+9fc0019c:	25080204 	addiu	t0,t0,516
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:44
+9fc001a0:	0100f809 	jalr	t0
+9fc001a4:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:47
+9fc001a8:	0200f825 	move	ra,s0
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/crt0.S:48
+9fc001ac:	03e00008 	jr	ra
+9fc001b0:	00000000 	nop
+_start():
+9fc001b4:	00000000 	nop
+
+Disassembly of section .exception_vector:
+
+80000000 <__exception_entry>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/exceptions.S:45
+80000000:	3c1b0000 	lui	k1,0x0
+80000004:	277b0000 	addiu	k1,k1,0
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/exceptions.S:46
+80000008:	1360fffd 	beqz	k1,80000000 <__exception_entry>
+8000000c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/exceptions.S:47
+80000010:	03600008 	jr	k1
+80000014:	00000000 	nop
+	...
+
+80000080 <__xtlb_refill_loop>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/exceptions.S:52
+80000080:	3c1b0000 	lui	k1,0x0
+80000084:	277b0000 	addiu	k1,k1,0
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/exceptions.S:53
+80000088:	1360fffd 	beqz	k1,80000080 <__xtlb_refill_loop>
+8000008c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/exceptions.S:54
+80000090:	03600008 	jr	k1
+80000094:	00000000 	nop
+	...
+
+80000100 <__cache_error_loop>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/exceptions.S:59
+80000100:	3c1b0000 	lui	k1,0x0
+80000104:	277b0000 	addiu	k1,k1,0
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/exceptions.S:60
+80000108:	1360fffd 	beqz	k1,80000100 <__cache_error_loop>
+8000010c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/exceptions.S:61
+80000110:	03600008 	jr	k1
+80000114:	00000000 	nop
+	...
+
+80000180 <__general_exception_loop>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/exceptions.S:66
+80000180:	3c1b0000 	lui	k1,0x0
+80000184:	277b0000 	addiu	k1,k1,0
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/exceptions.S:67
+80000188:	1360fffd 	beqz	k1,80000180 <__general_exception_loop>
+8000018c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/exceptions.S:68
+80000190:	03600008 	jr	k1
+80000194:	00000000 	nop
+	...
+
+Disassembly of section .text:
+
+80000200 <__exception_handle>:
+C:\Users\Dani\Desktop\SimulationSources-Skeleton/dummy.S:59
+80000200:	00000000 	nop
+
+80000204 <main>:
+main():
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:44
+80000204:	27bdffd0 	addiu	sp,sp,-48
+80000208:	afbf002c 	sw	ra,44(sp)
+8000020c:	afbe0028 	sw	s8,40(sp)
+80000210:	03a0f025 	move	s8,sp
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:50
+80000214:	afc00010 	sw	zero,16(s8)
+80000218:	1000002c 	b	800002cc <main+0xc8>
+8000021c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:51
+80000220:	afc00014 	sw	zero,20(s8)
+80000224:	10000022 	b	800002b0 <main+0xac>
+80000228:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:52 (discriminator 3)
+8000022c:	3c028000 	lui	v0,0x8000
+80000230:	8fc30010 	lw	v1,16(s8)
+80000234:	00032140 	sll	a0,v1,0x5
+80000238:	8fc30014 	lw	v1,20(s8)
+8000023c:	00831821 	addu	v1,a0,v1
+80000240:	00031880 	sll	v1,v1,0x2
+80000244:	24420760 	addiu	v0,v0,1888
+80000248:	00621021 	addu	v0,v1,v0
+8000024c:	24030001 	li	v1,1
+80000250:	ac430000 	sw	v1,0(v0)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:53 (discriminator 3)
+80000254:	3c028000 	lui	v0,0x8000
+80000258:	8fc30010 	lw	v1,16(s8)
+8000025c:	00032140 	sll	a0,v1,0x5
+80000260:	8fc30014 	lw	v1,20(s8)
+80000264:	00831821 	addu	v1,a0,v1
+80000268:	00031880 	sll	v1,v1,0x2
+8000026c:	24422760 	addiu	v0,v0,10080
+80000270:	00621021 	addu	v0,v1,v0
+80000274:	24030001 	li	v1,1
+80000278:	ac430000 	sw	v1,0(v0)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:54 (discriminator 3)
+8000027c:	3c028000 	lui	v0,0x8000
+80000280:	8fc30010 	lw	v1,16(s8)
+80000284:	00032140 	sll	a0,v1,0x5
+80000288:	8fc30014 	lw	v1,20(s8)
+8000028c:	00831821 	addu	v1,a0,v1
+80000290:	00031880 	sll	v1,v1,0x2
+80000294:	24421760 	addiu	v0,v0,5984
+80000298:	00621021 	addu	v0,v1,v0
+8000029c:	24030001 	li	v1,1
+800002a0:	ac430000 	sw	v1,0(v0)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:51 (discriminator 3)
+800002a4:	8fc20014 	lw	v0,20(s8)
+800002a8:	24420001 	addiu	v0,v0,1
+800002ac:	afc20014 	sw	v0,20(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:51 (discriminator 1)
+800002b0:	8fc20014 	lw	v0,20(s8)
+800002b4:	28420020 	slti	v0,v0,32
+800002b8:	1440ffdc 	bnez	v0,8000022c <main+0x28>
+800002bc:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:50 (discriminator 2)
+800002c0:	8fc20010 	lw	v0,16(s8)
+800002c4:	24420001 	addiu	v0,v0,1
+800002c8:	afc20010 	sw	v0,16(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:50 (discriminator 1)
+800002cc:	8fc20010 	lw	v0,16(s8)
+800002d0:	28420020 	slti	v0,v0,32
+800002d4:	1440ffd2 	bnez	v0,80000220 <main+0x1c>
+800002d8:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:60
+800002dc:	24091000 	li	t1,4096
+800002e0:	240a0000 	li	t2,0
+800002e4:	3c0b0000 	lui	t3,0x0
+
+800002e8 <loop1>:
+800002e8:	bd610000 	cache	0x1,0(t3)
+800002ec:	256b0010 	addiu	t3,t3,16
+800002f0:	254a0001 	addiu	t2,t2,1
+800002f4:	0149082a 	slt	at,t2,t1
+800002f8:	1420fffb 	bnez	at,800002e8 <loop1>
+800002fc:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:74
+80000300:	24020142 	li	v0,322
+80000304:	4082c800 	mtc0	v0,c0_perfcnt
+80000308:	000000c0 	ehb
+8000030c:	24020162 	li	v0,354
+80000310:	4082c802 	mtc0	v0,c0_perfcnt,2
+80000314:	000000c0 	ehb
+80000318:	4080c801 	mtc0	zero,c0_perfcnt,1
+8000031c:	000000c0 	ehb
+80000320:	4080c803 	mtc0	zero,c0_perfcnt,3
+80000324:	000000c0 	ehb
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:76
+80000328:	afc00010 	sw	zero,16(s8)
+8000032c:	1000003a 	b	80000418 <loop1+0x130>
+80000330:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:77
+80000334:	afc00014 	sw	zero,20(s8)
+80000338:	10000030 	b	800003fc <loop1+0x114>
+8000033c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:78
+80000340:	afc0001c 	sw	zero,28(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:79
+80000344:	afc00018 	sw	zero,24(s8)
+80000348:	1000001b 	b	800003b8 <loop1+0xd0>
+8000034c:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:80 (discriminator 3)
+80000350:	3c028000 	lui	v0,0x8000
+80000354:	8fc30010 	lw	v1,16(s8)
+80000358:	00032140 	sll	a0,v1,0x5
+8000035c:	8fc30018 	lw	v1,24(s8)
+80000360:	00831821 	addu	v1,a0,v1
+80000364:	00031880 	sll	v1,v1,0x2
+80000368:	24422760 	addiu	v0,v0,10080
+8000036c:	00621021 	addu	v0,v1,v0
+80000370:	8c430000 	lw	v1,0(v0)
+80000374:	3c028000 	lui	v0,0x8000
+80000378:	8fc40018 	lw	a0,24(s8)
+8000037c:	00042940 	sll	a1,a0,0x5
+80000380:	8fc40014 	lw	a0,20(s8)
+80000384:	00a42021 	addu	a0,a1,a0
+80000388:	00042080 	sll	a0,a0,0x2
+8000038c:	24421760 	addiu	v0,v0,5984
+80000390:	00821021 	addu	v0,a0,v0
+80000394:	8c420000 	lw	v0,0(v0)
+80000398:	00620018 	mult	v1,v0
+8000039c:	8fc2001c 	lw	v0,28(s8)
+800003a0:	00001812 	mflo	v1
+800003a4:	00431021 	addu	v0,v0,v1
+800003a8:	afc2001c 	sw	v0,28(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:79 (discriminator 3)
+800003ac:	8fc20018 	lw	v0,24(s8)
+800003b0:	24420001 	addiu	v0,v0,1
+800003b4:	afc20018 	sw	v0,24(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:79 (discriminator 1)
+800003b8:	8fc20018 	lw	v0,24(s8)
+800003bc:	28420020 	slti	v0,v0,32
+800003c0:	1440ffe3 	bnez	v0,80000350 <loop1+0x68>
+800003c4:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:82 (discriminator 2)
+800003c8:	3c028000 	lui	v0,0x8000
+800003cc:	8fc30010 	lw	v1,16(s8)
+800003d0:	00032140 	sll	a0,v1,0x5
+800003d4:	8fc30014 	lw	v1,20(s8)
+800003d8:	00831821 	addu	v1,a0,v1
+800003dc:	00031880 	sll	v1,v1,0x2
+800003e0:	24420760 	addiu	v0,v0,1888
+800003e4:	00621021 	addu	v0,v1,v0
+800003e8:	8fc3001c 	lw	v1,28(s8)
+800003ec:	ac430000 	sw	v1,0(v0)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:77 (discriminator 2)
+800003f0:	8fc20014 	lw	v0,20(s8)
+800003f4:	24420001 	addiu	v0,v0,1
+800003f8:	afc20014 	sw	v0,20(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:77 (discriminator 1)
+800003fc:	8fc20014 	lw	v0,20(s8)
+80000400:	28420020 	slti	v0,v0,32
+80000404:	1440ffce 	bnez	v0,80000340 <loop1+0x58>
+80000408:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:76 (discriminator 2)
+8000040c:	8fc20010 	lw	v0,16(s8)
+80000410:	24420001 	addiu	v0,v0,1
+80000414:	afc20010 	sw	v0,16(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:76 (discriminator 1)
+80000418:	8fc20010 	lw	v0,16(s8)
+8000041c:	28420020 	slti	v0,v0,32
+80000420:	1440ffc4 	bnez	v0,80000334 <loop1+0x4c>
+80000424:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:87
+80000428:	4002c801 	mfc0	v0,c0_perfcnt,1
+8000042c:	0040f825 	move	ra,v0
+80000430:	03e01025 	move	v0,ra
+80000434:	afc20020 	sw	v0,32(s8)
+80000438:	4002c803 	mfc0	v0,c0_perfcnt,3
+8000043c:	0040f825 	move	ra,v0
+80000440:	03e01025 	move	v0,ra
+80000444:	afc20024 	sw	v0,36(s8)
+80000448:	4080c800 	mtc0	zero,c0_perfcnt
+8000044c:	000000c0 	ehb
+80000450:	4080c802 	mtc0	zero,c0_perfcnt,2
+80000454:	000000c0 	ehb
+80000458:	4080c801 	mtc0	zero,c0_perfcnt,1
+8000045c:	000000c0 	ehb
+80000460:	4080c803 	mtc0	zero,c0_perfcnt,3
+80000464:	000000c0 	ehb
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:93
+80000468:	3c02bf80 	lui	v0,0xbf80
+8000046c:	34420004 	ori	v0,v0,0x4
+80000470:	8c420000 	lw	v0,0(v0)
+80000474:	2c430006 	sltiu	v1,v0,6
+80000478:	10600059 	beqz	v1,800005e0 <loop1+0x2f8>
+8000047c:	00000000 	nop
+80000480:	00021880 	sll	v1,v0,0x2
+80000484:	3c028000 	lui	v0,0x8000
+80000488:	24420740 	addiu	v0,v0,1856
+8000048c:	00621021 	addu	v0,v1,v0
+80000490:	8c420000 	lw	v0,0(v0)
+80000494:	00400008 	jr	v0
+80000498:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:95
+8000049c:	8fc20020 	lw	v0,32(s8)
+800004a0:	00402025 	move	a0,v0
+800004a4:	0c00017d 	jal	800005f4 <writeValTo7Segs>
+800004a8:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:96
+800004ac:	1000004f 	b	800005ec <loop1+0x304>
+800004b0:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:98
+800004b4:	8fc20024 	lw	v0,36(s8)
+800004b8:	00402025 	move	a0,v0
+800004bc:	0c00017d 	jal	800005f4 <writeValTo7Segs>
+800004c0:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:99
+800004c4:	10000049 	b	800005ec <loop1+0x304>
+800004c8:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:102
+800004cc:	40028001 	mfc0	v0,c0_config1
+800004d0:	0040f825 	move	ra,v0
+800004d4:	03e01025 	move	v0,ra
+800004d8:	30420380 	andi	v0,v0,0x380
+800004dc:	000211c2 	srl	v0,v0,0x7
+800004e0:	24420001 	addiu	v0,v0,1
+800004e4:	00402025 	move	a0,v0
+800004e8:	0c00017d 	jal	800005f4 <writeValTo7Segs>
+800004ec:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:103
+800004f0:	1000003e 	b	800005ec <loop1+0x304>
+800004f4:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:106
+800004f8:	40028001 	mfc0	v0,c0_config1
+800004fc:	0040f825 	move	ra,v0
+80000500:	03e01025 	move	v0,ra
+80000504:	3042e000 	andi	v0,v0,0xe000
+80000508:	00021b42 	srl	v1,v0,0xd
+8000050c:	24020007 	li	v0,7
+80000510:	1062000c 	beq	v1,v0,80000544 <loop1+0x25c>
+80000514:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:106 (discriminator 1)
+80000518:	40028001 	mfc0	v0,c0_config1
+8000051c:	0040f825 	move	ra,v0
+80000520:	03e01025 	move	v0,ra
+80000524:	3042e000 	andi	v0,v0,0xe000
+80000528:	00021342 	srl	v0,v0,0xd
+8000052c:	24420006 	addiu	v0,v0,6
+80000530:	00401825 	move	v1,v0
+80000534:	24020001 	li	v0,1
+80000538:	00621004 	sllv	v0,v0,v1
+8000053c:	10000002 	b	80000548 <loop1+0x260>
+80000540:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:106 (discriminator 2)
+80000544:	24020020 	li	v0,32
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:106 (discriminator 4)
+80000548:	00402025 	move	a0,v0
+8000054c:	0c00017d 	jal	800005f4 <writeValTo7Segs>
+80000550:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:107 (discriminator 4)
+80000554:	10000025 	b	800005ec <loop1+0x304>
+80000558:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:110
+8000055c:	40028001 	mfc0	v0,c0_config1
+80000560:	0040f825 	move	ra,v0
+80000564:	03e01025 	move	v0,ra
+80000568:	30421c00 	andi	v0,v0,0x1c00
+8000056c:	00021282 	srl	v0,v0,0xa
+80000570:	1040000c 	beqz	v0,800005a4 <loop1+0x2bc>
+80000574:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:110 (discriminator 1)
+80000578:	40028001 	mfc0	v0,c0_config1
+8000057c:	0040f825 	move	ra,v0
+80000580:	03e01025 	move	v0,ra
+80000584:	30421c00 	andi	v0,v0,0x1c00
+80000588:	00021282 	srl	v0,v0,0xa
+8000058c:	24420001 	addiu	v0,v0,1
+80000590:	00401825 	move	v1,v0
+80000594:	24020001 	li	v0,1
+80000598:	00621004 	sllv	v0,v0,v1
+8000059c:	10000002 	b	800005a8 <loop1+0x2c0>
+800005a0:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:110 (discriminator 2)
+800005a4:	00001025 	move	v0,zero
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:110 (discriminator 4)
+800005a8:	00402025 	move	a0,v0
+800005ac:	0c00017d 	jal	800005f4 <writeValTo7Segs>
+800005b0:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:111 (discriminator 4)
+800005b4:	1000000d 	b	800005ec <loop1+0x304>
+800005b8:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:114
+800005bc:	40028000 	mfc0	v0,c0_config
+800005c0:	0040f825 	move	ra,v0
+800005c4:	03e01025 	move	v0,ra
+800005c8:	30420007 	andi	v0,v0,0x7
+800005cc:	00402025 	move	a0,v0
+800005d0:	0c00017d 	jal	800005f4 <writeValTo7Segs>
+800005d4:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:115
+800005d8:	10000004 	b	800005ec <loop1+0x304>
+800005dc:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:117
+800005e0:	00002025 	move	a0,zero
+800005e4:	0c00017d 	jal	800005f4 <writeValTo7Segs>
+800005e8:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:119
+800005ec:	1000ff9e 	b	80000468 <loop1+0x180>
+800005f0:	00000000 	nop
+
+800005f4 <writeValTo7Segs>:
+writeValTo7Segs():
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:126
+800005f4:	27bdffe8 	addiu	sp,sp,-24
+800005f8:	afbe0014 	sw	s8,20(sp)
+800005fc:	03a0f025 	move	s8,sp
+80000600:	afc40018 	sw	a0,24(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:128
+80000604:	afc00004 	sw	zero,4(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:129
+80000608:	afc00008 	sw	zero,8(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:132
+8000060c:	afc00004 	sw	zero,4(s8)
+80000610:	10000025 	b	800006a8 <writeValTo7Segs+0xb4>
+80000614:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:133 (discriminator 4)
+80000618:	8fc30018 	lw	v1,24(s8)
+8000061c:	3c02cccc 	lui	v0,0xcccc
+80000620:	3442cccd 	ori	v0,v0,0xcccd
+80000624:	00620019 	multu	v1,v0
+80000628:	00001010 	mfhi	v0
+8000062c:	000210c2 	srl	v0,v0,0x3
+80000630:	00021040 	sll	v0,v0,0x1
+80000634:	00022080 	sll	a0,v0,0x2
+80000638:	00441021 	addu	v0,v0,a0
+8000063c:	00621023 	subu	v0,v1,v0
+80000640:	afc20000 	sw	v0,0(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:134 (discriminator 4)
+80000644:	8fc30000 	lw	v1,0(s8)
+80000648:	8fc20004 	lw	v0,4(s8)
+8000064c:	00021080 	sll	v0,v0,0x2
+80000650:	00431004 	sllv	v0,v1,v0
+80000654:	00401825 	move	v1,v0
+80000658:	8fc20008 	lw	v0,8(s8)
+8000065c:	00621025 	or	v0,v1,v0
+80000660:	afc20008 	sw	v0,8(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:135 (discriminator 4)
+80000664:	8fc30018 	lw	v1,24(s8)
+80000668:	3c02cccc 	lui	v0,0xcccc
+8000066c:	3442cccd 	ori	v0,v0,0xcccd
+80000670:	00620019 	multu	v1,v0
+80000674:	00001010 	mfhi	v0
+80000678:	000210c2 	srl	v0,v0,0x3
+8000067c:	afc20018 	sw	v0,24(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:136 (discriminator 4)
+80000680:	8fc20004 	lw	v0,4(s8)
+80000684:	24030001 	li	v1,1
+80000688:	00431004 	sllv	v0,v1,v0
+8000068c:	00401825 	move	v1,v0
+80000690:	8fc2000c 	lw	v0,12(s8)
+80000694:	00621025 	or	v0,v1,v0
+80000698:	afc2000c 	sw	v0,12(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:132 (discriminator 4)
+8000069c:	8fc20004 	lw	v0,4(s8)
+800006a0:	24420001 	addiu	v0,v0,1
+800006a4:	afc20004 	sw	v0,4(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:132 (discriminator 1)
+800006a8:	8fc20018 	lw	v0,24(s8)
+800006ac:	10400005 	beqz	v0,800006c4 <writeValTo7Segs+0xd0>
+800006b0:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:132 (discriminator 3)
+800006b4:	8fc20004 	lw	v0,4(s8)
+800006b8:	28420008 	slti	v0,v0,8
+800006bc:	1440ffd6 	bnez	v0,80000618 <writeValTo7Segs+0x24>
+800006c0:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:139
+800006c4:	3c02bf80 	lui	v0,0xbf80
+800006c8:	34420010 	ori	v0,v0,0x10
+800006cc:	8fc30008 	lw	v1,8(s8)
+800006d0:	ac430000 	sw	v1,0(v0)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:140
+800006d4:	3c02bf80 	lui	v0,0xbf80
+800006d8:	3442000c 	ori	v0,v0,0xc
+800006dc:	8fc3000c 	lw	v1,12(s8)
+800006e0:	00031827 	nor	v1,zero,v1
+800006e4:	ac430000 	sw	v1,0(v0)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:142
+800006e8:	00000000 	nop
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:143
+800006ec:	03c0e825 	move	sp,s8
+800006f0:	8fbe0014 	lw	s8,20(sp)
+800006f4:	27bd0018 	addiu	sp,sp,24
+800006f8:	03e00008 	jr	ra
+800006fc:	00000000 	nop
+
+80000700 <_mips_handle_exception>:
+_mips_handle_exception():
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:147
+80000700:	27bdfff8 	addiu	sp,sp,-8
+80000704:	afbe0004 	sw	s8,4(sp)
+80000708:	03a0f025 	move	s8,sp
+8000070c:	afc40008 	sw	a0,8(s8)
+80000710:	afc5000c 	sw	a1,12(s8)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:148
+80000714:	3c02bf80 	lui	v0,0xbf80
+80000718:	34038001 	li	v1,0x8001
+8000071c:	ac430000 	sw	v1,0(v0)
+C:\Users\Dani\Desktop\SimulationSources_Baseline/main.c:149 (discriminator 1)
+80000720:	1000ffff 	b	80000720 <_mips_handle_exception+0x20>
+80000724:	00000000 	nop
+
+Disassembly of section .rodata:
+
+80000740 <.rodata>:
+80000740:	8000049c 	lb	zero,1180(zero)
+80000744:	800004b4 	lb	zero,1204(zero)
+80000748:	800004cc 	lb	zero,1228(zero)
+8000074c:	800004f8 	lb	zero,1272(zero)
+80000750:	8000055c 	lb	zero,1372(zero)
+80000754:	800005bc 	lb	zero,1468(zero)
+
+Disassembly of section .bss:
+
+80000760 <_bss_start>:
+	...
+
+80001760 <z>:
+	...
+
+80002760 <y>:
+	...
+
+Disassembly of section .debug_aranges:
+
+00000000 <.debug_aranges>:
+   0:	0000001c 	0x1c
+   4:	00000002 	srl	zero,zero,0x0
+   8:	00040000 	sll	zero,a0,0x0
+   c:	00000000 	nop
+  10:	9fc00144 	0x9fc00144
+  14:	00000070 	tge	zero,zero,0x1
+	...
+  20:	0000001c 	0x1c
+  24:	00610002 	0x610002
+  28:	00040000 	sll	zero,a0,0x0
+  2c:	00000000 	nop
+  30:	9fc00000 	0x9fc00000
+  34:	00000144 	0x144
+	...
+  40:	0000001c 	0x1c
+  44:	00c20002 	0xc20002
+  48:	00040000 	sll	zero,a0,0x0
+  4c:	00000000 	nop
+  50:	80000000 	lb	zero,0(zero)
+  54:	00000198 	0x198
+	...
+  60:	0000001c 	0x1c
+  64:	01290002 	0x1290002
+  68:	00040000 	sll	zero,a0,0x0
+  6c:	00000000 	nop
+  70:	80000200 	lb	zero,512(zero)
+  74:	00000004 	sllv	zero,zero,zero
+	...
+  80:	0000001c 	0x1c
+  84:	018b0002 	0x18b0002
+  88:	00040000 	sll	zero,a0,0x0
+  8c:	00000000 	nop
+  90:	80000204 	lb	zero,516(zero)
+  94:	00000524 	0x524
+	...
+
+Disassembly of section .debug_info:
+
+00000000 <.debug_info>:
+   0:	0000005d 	0x5d
+   4:	00000002 	srl	zero,zero,0x0
+   8:	01040000 	0x1040000
+   c:	00000000 	nop
+  10:	9fc00144 	0x9fc00144
+  14:	9fc001b4 	0x9fc001b4
+  18:	30747263 	andi	s4,v1,0x7263
+  1c:	4300532e 	c0	0x100532e
+  20:	73555c3a 	0x73555c3a
+  24:	5c737265 	0x5c737265
+  28:	696e6144 	0x696e6144
+  2c:	7365445c 	udi12	k1,a1,t0,0x11
+  30:	706f746b 	s16std	xr1,v1,-70,ptn1
+  34:	6d69535c 	0x6d69535c
+  38:	74616c75 	jalx	185b1d4 <__memory_size+0x183b9d4>
+  3c:	536e6f69 	beql	k1,t6,1bde4 <__isr_vec_space+0x1bdc4>
+  40:	6372756f 	0x6372756f
+  44:	532d7365 	beql	t9,t5,1cddc <__isr_vec_space+0x1cdbc>
+  48:	656c656b 	0x656c656b
+  4c:	006e6f74 	teq	v1,t6,0x1bd
+  50:	20554e47 	addi	s5,v0,20039
+  54:	32205341 	andi	zero,s1,0x5341
+  58:	2e34322e 	sltiu	s4,s1,12846
+  5c:	01003039 	0x1003039
+  60:	00005d80 	sll	t3,zero,0x16
+  64:	14000200 	bnez	zero,868 <__isr_vec_space+0x848>
+  68:	04000000 	bltz	zero,6c <__isr_vec_space+0x4c>
+  6c:	00004801 	movf	t1,zero,$fcc0
+  70:	c0000000 	ll	zero,0(zero)
+  74:	c001449f 	ll	at,17567(zero)
+  78:	6f6f629f 	0x6f6f629f
+  7c:	00532e74 	teq	v0,s3,0xb9
+  80:	555c3a43 	bnel	t2,gp,e990 <__isr_vec_space+0xe970>
+  84:	73726573 	d32sar	xr5,xr9,xr9,xr12,13
+  88:	6e61445c 	0x6e61445c
+  8c:	65445c69 	0x65445c69
+  90:	6f746b73 	0x6f746b73
+  94:	69535c70 	0x69535c70
+  98:	616c756d 	0x616c756d
+  9c:	6e6f6974 	0x6e6f6974
+  a0:	72756f53 	udi3	s3,s5,t5,0x1d
+  a4:	2d736563 	sltiu	s3,t3,25955
+  a8:	6c656b53 	0x6c656b53
+  ac:	6e6f7465 	0x6e6f7465
+  b0:	554e4700 	bnel	t2,t6,11cb4 <__isr_vec_space+0x11c94>
+  b4:	20534120 	addi	s3,v0,16672
+  b8:	34322e32 	ori	s2,at,0x2e32
+  bc:	0030392e 	0x30392e
+  c0:	00638001 	0x638001
+  c4:	00020000 	sll	zero,v0,0x0
+  c8:	00000028 	0x28
+  cc:	00ce0104 	0xce0104
+  d0:	00000000 	nop
+  d4:	01988000 	0x1988000
+  d8:	78658000 	andi.b	$w0,$w16,0x65
+  dc:	74706563 	jalx	1c1958c <__memory_size+0x1bf9d8c>
+  e0:	736e6f69 	0x736e6f69
+  e4:	4300532e 	c0	0x100532e
+  e8:	73555c3a 	0x73555c3a
+  ec:	5c737265 	0x5c737265
+  f0:	696e6144 	0x696e6144
+  f4:	7365445c 	udi12	k1,a1,t0,0x11
+  f8:	706f746b 	s16std	xr1,v1,-70,ptn1
+  fc:	6d69535c 	0x6d69535c
+ 100:	74616c75 	jalx	185b1d4 <__memory_size+0x183b9d4>
+ 104:	536e6f69 	beql	k1,t6,1beac <__isr_vec_space+0x1be8c>
+ 108:	6372756f 	0x6372756f
+ 10c:	532d7365 	beql	t9,t5,1cea4 <__isr_vec_space+0x1ce84>
+ 110:	656c656b 	0x656c656b
+ 114:	006e6f74 	teq	v1,t6,0x1bd
+ 118:	20554e47 	addi	s5,v0,20039
+ 11c:	32205341 	andi	zero,s1,0x5341
+ 120:	2e34322e 	sltiu	s4,s1,12846
+ 124:	01003039 	0x1003039
+ 128:	00005e80 	sll	t3,zero,0x1a
+ 12c:	3c000200 	lui	zero,0x200
+ 130:	04000000 	bltz	zero,134 <__isr_vec_space+0x114>
+ 134:	00011b01 	0x11b01
+ 138:	00020000 	sll	zero,v0,0x0
+ 13c:	00020480 	sll	zero,v0,0x12
+ 140:	6d756480 	0x6d756480
+ 144:	532e796d 	beql	t9,t6,1e6fc <__isr_vec_space+0x1e6dc>
+ 148:	5c3a4300 	0x5c3a4300
+ 14c:	72657355 	s32sdi	xr13,s3,1392
+ 150:	61445c73 	0x61445c73
+ 154:	445c696e 	0x445c696e
+ 158:	746b7365 	jalx	1adcd94 <__memory_size+0x1abd594>
+ 15c:	535c706f 	beql	k0,gp,1c31c <__isr_vec_space+0x1c2fc>
+ 160:	6c756d69 	0x6c756d69
+ 164:	6f697461 	0x6f697461
+ 168:	756f536e 	jalx	5bd4db8 <__memory_size+0x5bb55b8>
+ 16c:	73656372 	0x73656372
+ 170:	656b532d 	0x656b532d
+ 174:	6f74656c 	0x6f74656c
+ 178:	4e47006e 	msub.ps	$f1,$f18,$f0,$f7
+ 17c:	53412055 	beql	k0,at,82d4 <__isr_vec_space+0x82b4>
+ 180:	322e3220 	andi	t6,s1,0x3220
+ 184:	30392e34 	andi	t9,at,0x2e34
+ 188:	84800100 	lh	zero,256(a0)
+ 18c:	04000002 	bltz	zero,198 <__isr_vec_space+0x178>
+ 190:	00005000 	sll	t2,zero,0x0
+ 194:	06010400 	bgez	s0,1198 <__isr_vec_space+0x1178>
+ 198:	01000000 	0x1000000
+ 19c:	0000005c 	0x5c
+ 1a0:	000000c6 	0xc6
+ 1a4:	80000204 	lb	zero,516(zero)
+ 1a8:	00000524 	0x524
+ 1ac:	00000152 	0x152
+ 1b0:	7d070402 	0x7d070402
+ 1b4:	02000000 	0x2000000
+ 1b8:	00820704 	0x820704
+ 1bc:	8f030000 	lw	v1,0(t8)
+ 1c0:	02000000 	0x2000000
+ 1c4:	002c0393 	0x2c0393
+ 1c8:	08020000 	j	80000 <__memory_size+0x60800>
+ 1cc:	00007807 	srav	t7,zero,zero
+ 1d0:	05040400 	0x5040400
+ 1d4:	00746e69 	0x746e69
+ 1d8:	1c010805 	0x1c010805
+ 1dc:	0000006e 	0x6e
+ 1e0:	00007106 	0x7106
+ 1e4:	2c1e0100 	sltiu	s8,zero,256
+ 1e8:	00000000 	nop
+ 1ec:	00005506 	0x5506
+ 1f0:	2c1f0100 	sltiu	ra,zero,256
+ 1f4:	04000000 	bltz	zero,1f8 <__isr_vec_space+0x1d8>
+ 1f8:	00630700 	0x630700
+ 1fc:	21010000 	addi	at,t0,0
+ 200:	0000004d 	break	0x0,0x1
+ 204:	0000a008 	0xa008
+ 208:	462c0100 	add.d	$f4,$f0,$f12
+ 20c:	04000000 	bltz	zero,210 <__isr_vec_space+0x1f0>
+ 210:	f0800002 	0xf0800002
+ 214:	01000003 	0x1000003
+ 218:	0001a59c 	0x1a59c
+ 21c:	00690900 	0x690900
+ 220:	00462e01 	0x462e01
+ 224:	91020000 	lbu	v0,0(t0)
+ 228:	006a0960 	0x6a0960
+ 22c:	00462e01 	0x462e01
+ 230:	91020000 	lbu	v0,0(t0)
+ 234:	006b0964 	0x6b0964
+ 238:	00462e01 	0x462e01
+ 23c:	91020000 	lbu	v0,0(t0)
+ 240:	00720968 	0x720968
+ 244:	00462e01 	0x462e01
+ 248:	91020000 	lbu	v0,0(t0)
+ 24c:	01070a6c 	0x1070a6c
+ 250:	2f010000 	sltiu	at,t8,0
+ 254:	0000006e 	0x6e
+ 258:	0b709102 	j	dc24408 <__memory_size+0xdc04c08>
+ 25c:	80000428 	lb	zero,1064(zero)
+ 260:	0000000c 	syscall
+ 264:	000000eb 	0xeb
+ 268:	725f5f09 	0x725f5f09
+ 26c:	25570100 	addiu	s7,t2,256
+ 270:	01000000 	0x1000000
+ 274:	380b006f 	xori	t3,zero,0x6f
+ 278:	0c800004 	jal	2000010 <__memory_size+0x1fe0810>
+ 27c:	06000000 	bltz	s0,280 <__isr_vec_space+0x260>
+ 280:	09000001 	j	4000004 <__memory_size+0x3fe0804>
+ 284:	00725f5f 	0x725f5f
+ 288:	00255701 	0x255701
+ 28c:	6f010000 	0x6f010000
+ 290:	04cc0b00 	teqi	a2,2816
+ 294:	000c8000 	sll	s0,t4,0x0
+ 298:	01210000 	0x1210000
+ 29c:	5f090000 	0x5f090000
+ 2a0:	0100725f 	0x100725f
+ 2a4:	00002566 	0x2566
+ 2a8:	006f0100 	0x6f0100
+ 2ac:	0004f80b 	movn	ra,zero,a0
+ 2b0:	00000c80 	sll	at,zero,0x12
+ 2b4:	00013c00 	sll	a3,at,0x10
+ 2b8:	5f5f0900 	0x5f5f0900
+ 2bc:	6a010072 	0x6a010072
+ 2c0:	00000025 	move	zero,zero
+ 2c4:	0b006f01 	j	c01bc04 <__memory_size+0xbffc404>
+ 2c8:	80000518 	lb	zero,1304(zero)
+ 2cc:	0000000c 	syscall
+ 2d0:	00000157 	0x157
+ 2d4:	725f5f09 	0x725f5f09
+ 2d8:	256a0100 	addiu	t2,t3,256
+ 2dc:	01000000 	0x1000000
+ 2e0:	5c0b006f 	0x5c0b006f
+ 2e4:	0c800005 	jal	2000014 <__memory_size+0x1fe0814>
+ 2e8:	72000000 	madd	s0,zero
+ 2ec:	09000001 	j	4000004 <__memory_size+0x3fe0804>
+ 2f0:	00725f5f 	0x725f5f
+ 2f4:	00256e01 	0x256e01
+ 2f8:	6f010000 	0x6f010000
+ 2fc:	05780b00 	0x5780b00
+ 300:	000c8000 	sll	s0,t4,0x0
+ 304:	018d0000 	0x18d0000
+ 308:	5f090000 	0x5f090000
+ 30c:	0100725f 	0x100725f
+ 310:	0000256e 	0x256e
+ 314:	006f0100 	0x6f0100
+ 318:	0005bc0c 	syscall	0x16f0
+ 31c:	00000c80 	sll	at,zero,0x12
+ 320:	5f5f0900 	0x5f5f0900
+ 324:	72010072 	d32sarl	xr1,xr0,xr4,8
+ 328:	00000025 	move	zero,zero
+ 32c:	00006f01 	0x6f01
+ 330:	0000f70d 	break	0x0,0x3dc
+ 334:	f47e0100 	sdc1	$f30,256(v1)
+ 338:	0c800005 	jal	2000014 <__memory_size+0x1fe0814>
+ 33c:	01000001 	movf	zero,t0,$fcc0
+ 340:	0001ff9c 	0x1ff9c
+ 344:	61760e00 	0x61760e00
+ 348:	7e01006c 	0x7e01006c
+ 34c:	0000002c 	0x2c
+ 350:	0a009102 	j	8024408 <__memory_size+0x8004c08>
+ 354:	00000000 	nop
+ 358:	01ff8001 	0x1ff8001
+ 35c:	91020000 	lbu	v0,0(t0)
+ 360:	00690968 	0x690968
+ 364:	01ff8001 	0x1ff8001
+ 368:	91020000 	lbu	v0,0(t0)
+ 36c:	00a50a6c 	0xa50a6c
+ 370:	81010000 	lb	at,0(t0)
+ 374:	00000204 	0x204
+ 378:	0a709102 	j	9c24408 <__memory_size+0x9c04c08>
+ 37c:	00000097 	0x97
+ 380:	02048101 	0x2048101
+ 384:	91020000 	lbu	v0,0(t0)
+ 388:	460f0074 	cabs.olt.s	$fcc0,$f0,$f15
+ 38c:	0f000000 	jal	c000000 <__memory_size+0xbfe0800>
+ 390:	0000002c 	0x2c
+ 394:	0000af0d 	break	0x0,0x2bc
+ 398:	00930100 	0x930100
+ 39c:	28800007 	slti	zero,a0,7
+ 3a0:	01000000 	0x1000000
+ 3a4:	00023b9c 	0x23b9c
+ 3a8:	74630e00 	jalx	18c3800 <__memory_size+0x18a4000>
+ 3ac:	93010078 	lbu	at,120(t8)
+ 3b0:	0000023b 	0x23b
+ 3b4:	10009102 	b	fffe47c0 <__entry+0x403e47c0>
+ 3b8:	0000011c 	0x11c
+ 3bc:	00469301 	0x469301
+ 3c0:	91020000 	lbu	v0,0(t0)
+ 3c4:	04110004 	bal	3d8 <__isr_vec_space+0x3b8>
+ 3c8:	00004612 	0x4612
+ 3cc:	00025300 	sll	t2,v0,0xc
+ 3d0:	02531300 	0x2531300
+ 3d4:	131f0000 	beq	t8,ra,3d8 <__isr_vec_space+0x3b8>
+ 3d8:	00000253 	0x253
+ 3dc:	0402001f 	bltzl	zero,45c <__isr_vec_space+0x43c>
+ 3e0:	00011307 	0x11307
+ 3e4:	00781400 	0x781400
+ 3e8:	023d2801 	movt	a1,s1,$fcc7
+ 3ec:	03050000 	0x3050000
+ 3f0:	80000760 	lb	zero,1888(zero)
+ 3f4:	01007914 	0x1007914
+ 3f8:	00023d28 	0x23d28
+ 3fc:	60030500 	0x60030500
+ 400:	14800027 	bnez	a0,4a0 <__isr_vec_space+0x480>
+ 404:	2801007a 	slti	at,zero,122
+ 408:	0000023d 	0x23d
+ 40c:	17600305 	bnez	k1,1024 <__isr_vec_space+0x1004>
+ 410:	Address 0x0000000000000410 is out of bounds.
+
+
+Disassembly of section .debug_abbrev:
+
+00000000 <.debug_abbrev>:
+   0:	10001101 	b	4408 <__isr_vec_space+0x43e8>
+   4:	12011106 	beq	s0,at,4420 <__isr_vec_space+0x4400>
+   8:	1b080301 	0x1b080301
+   c:	13082508 	beq	t8,t0,9430 <__isr_vec_space+0x9410>
+  10:	00000005 	lsa	zero,zero,zero,0x1
+  14:	10001101 	b	441c <__isr_vec_space+0x43fc>
+  18:	12011106 	beq	s0,at,4434 <__isr_vec_space+0x4414>
+  1c:	1b080301 	0x1b080301
+  20:	13082508 	beq	t8,t0,9444 <__isr_vec_space+0x9424>
+  24:	00000005 	lsa	zero,zero,zero,0x1
+  28:	10001101 	b	4430 <__isr_vec_space+0x4410>
+  2c:	12011106 	beq	s0,at,4448 <__isr_vec_space+0x4428>
+  30:	1b080301 	0x1b080301
+  34:	13082508 	beq	t8,t0,9458 <__isr_vec_space+0x9438>
+  38:	00000005 	lsa	zero,zero,zero,0x1
+  3c:	10001101 	b	4444 <__isr_vec_space+0x4424>
+  40:	12011106 	beq	s0,at,445c <__isr_vec_space+0x443c>
+  44:	1b080301 	0x1b080301
+  48:	13082508 	beq	t8,t0,946c <__isr_vec_space+0x944c>
+  4c:	00000005 	lsa	zero,zero,zero,0x1
+  50:	25011101 	addiu	at,t0,4353
+  54:	030b130e 	0x30b130e
+  58:	110e1b0e 	beq	t0,t6,6c94 <__isr_vec_space+0x6c74>
+  5c:	10061201 	beq	zero,a2,4864 <__isr_vec_space+0x4844>
+  60:	02000017 	0x2000017
+  64:	0b0b0024 	j	c2c0090 <__memory_size+0xc2a0890>
+  68:	0e030b3e 	jal	80c2cf8 <__memory_size+0x80a34f8>
+  6c:	16030000 	bne	s0,v1,70 <__isr_vec_space+0x50>
+  70:	3a0e0300 	xori	t6,s0,0x300
+  74:	49053b0b 	bc2t	$cc1,eca4 <__isr_vec_space+0xec84>
+  78:	04000013 	bltz	zero,c8 <__isr_vec_space+0xa8>
+  7c:	0b0b0024 	j	c2c0090 <__memory_size+0xc2a0890>
+  80:	08030b3e 	j	c2cf8 <__memory_size+0xa34f8>
+  84:	13050000 	beq	t8,a1,88 <__isr_vec_space+0x68>
+  88:	3a0b0b01 	xori	t3,s0,0xb01
+  8c:	010b3b0b 	0x10b3b0b
+  90:	06000013 	bltz	s0,e0 <__isr_vec_space+0xc0>
+  94:	0e03000d 	jal	80c0034 <__memory_size+0x80a0834>
+  98:	0b3b0b3a 	j	cec2ce8 <__memory_size+0xcea34e8>
+  9c:	0b381349 	j	ce04d24 <__memory_size+0xcde5524>
+  a0:	16070000 	bne	s0,a3,a4 <__isr_vec_space+0x84>
+  a4:	3a0e0300 	xori	t6,s0,0x300
+  a8:	490b3b0b 	bc2tl	$cc2,ecd8 <__isr_vec_space+0xecb8>
+  ac:	08000013 	j	4c <__isr_vec_space+0x2c>
+  b0:	193f012e 	0x193f012e
+  b4:	0b3a0e03 	j	ce8380c <__memory_size+0xce6400c>
+  b8:	13490b3b 	beq	k0,t1,2da8 <__isr_vec_space+0x2d88>
+  bc:	06120111 	bltzall	s0,504 <__isr_vec_space+0x4e4>
+  c0:	42961840 	c0	0x961840
+  c4:	00130119 	0x130119
+  c8:	00340900 	0x340900
+  cc:	0b3a0803 	j	ce8200c <__memory_size+0xce6280c>
+  d0:	13490b3b 	beq	k0,t1,2dc0 <__isr_vec_space+0x2da0>
+  d4:	00001802 	srl	v1,zero,0x0
+  d8:	0300340a 	0x300340a
+  dc:	3b0b3a0e 	xori	t3,t8,0x3a0e
+  e0:	0213490b 	0x213490b
+  e4:	0b000018 	j	c000060 <__memory_size+0xbfe0860>
+  e8:	0111010b 	0x111010b
+  ec:	13010612 	beq	t8,at,1938 <__isr_vec_space+0x1918>
+  f0:	0b0c0000 	j	c300000 <__memory_size+0xc2e0800>
+  f4:	12011101 	beq	s0,at,44fc <__isr_vec_space+0x44dc>
+  f8:	0d000006 	jal	4000018 <__memory_size+0x3fe0818>
+  fc:	193f012e 	0x193f012e
+ 100:	0b3a0e03 	j	ce8380c <__memory_size+0xce6400c>
+ 104:	19270b3b 	0x19270b3b
+ 108:	06120111 	bltzall	s0,550 <__isr_vec_space+0x530>
+ 10c:	42971840 	c0	0x971840
+ 110:	00130119 	0x130119
+ 114:	00050e00 	sll	at,a1,0x18
+ 118:	0b3a0803 	j	ce8200c <__memory_size+0xce6280c>
+ 11c:	13490b3b 	beq	k0,t1,2e0c <__isr_vec_space+0x2dec>
+ 120:	00001802 	srl	v1,zero,0x0
+ 124:	4900350f 	bc2f	d564 <__isr_vec_space+0xd544>
+ 128:	10000013 	b	178 <__isr_vec_space+0x158>
+ 12c:	0e030005 	jal	80c0014 <__memory_size+0x80a0814>
+ 130:	0b3b0b3a 	j	cec2ce8 <__memory_size+0xcea34e8>
+ 134:	18021349 	0x18021349
+ 138:	0f110000 	jal	c440000 <__memory_size+0xc420800>
+ 13c:	000b0b00 	sll	at,t3,0xc
+ 140:	01011200 	0x1011200
+ 144:	13011349 	beq	t8,at,4e6c <__isr_vec_space+0x4e4c>
+ 148:	21130000 	addi	s3,t0,0
+ 14c:	2f134900 	sltiu	s3,t8,18688
+ 150:	1400000b 	bnez	zero,180 <__isr_vec_space+0x160>
+ 154:	08030034 	j	c00d0 <__memory_size+0xa08d0>
+ 158:	0b3b0b3a 	j	cec2ce8 <__memory_size+0xcea34e8>
+ 15c:	193f1349 	0x193f1349
+ 160:	00001802 	srl	v1,zero,0x0
+	...
+
+Disassembly of section .debug_line:
+
+00000000 <.debug_line>:
+   0:	00000044 	0x44
+   4:	001d0002 	srl	zero,sp,0x0
+   8:	01010000 	0x1010000
+   c:	000d0efb 	0xd0efb
+  10:	01010101 	0x1010101
+  14:	01000000 	0x1000000
+  18:	00010000 	sll	zero,at,0x0
+  1c:	30747263 	andi	s4,v1,0x7263
+  20:	0000532e 	0x532e
+  24:	00000000 	nop
+  28:	01440205 	0x1440205
+  2c:	0f039fc0 	jal	c0e7f00 <__memory_size+0xc0c8700>
+  30:	84844c01 	lh	a0,19457(a0)
+  34:	4b848383 	c2	0x1848383
+  38:	4e4c854b 	c3	0x4c854b
+  3c:	4d4b4b4b 	0x4d4b4b4b
+  40:	024b8583 	0x24b8583
+  44:	01010008 	0x1010008
+  48:	00000082 	srl	zero,zero,0x2
+  4c:	001d0002 	srl	zero,sp,0x0
+  50:	01010000 	0x1010000
+  54:	000d0efb 	0xd0efb
+  58:	01010101 	0x1010101
+  5c:	01000000 	0x1000000
+  60:	00010000 	sll	zero,at,0x0
+  64:	746f6f62 	jalx	1bdbd88 <__memory_size+0x1bbc588>
+  68:	0000532e 	0x532e
+  6c:	00000000 	nop
+  70:	00000205 	0x205
+  74:	13039fc0 	beq	t8,v1,fffe7f78 <__entry+0x403e7f78>
+  78:	4d835101 	0x4d835101
+  7c:	4a0a034d 	c2	0xa034d
+  80:	4d4b4b4b 	0x4d4b4b4b
+  84:	4b4b4b4b 	c2	0x14b4b4b
+  88:	4b4d4b4b 	c2	0x14d4b4b
+  8c:	4c4b4b4b 	0x4c4b4b4b
+  90:	4b4b514b 	c2	0x14b514b
+  94:	4c4b4c4b 	0x4c4b4c4b
+  98:	4b4c4b4b 	c2	0x14c4b4b
+  9c:	4b4c4b4b 	c2	0x14c4b4b
+  a0:	4b4b4b4f 	c2	0x14b4b4f
+  a4:	4b4a0c03 	c2	0x14a0c03
+  a8:	834c4b4b 	lb	t4,19275(k0)
+  ac:	4b4b504b 	c2	0x14b504b
+  b0:	4c4b4c4b 	0x4c4b4c4b
+  b4:	4b4c4b4b 	c2	0x14c4b4b
+  b8:	4b4c4b4b 	c2	0x14c4b4b
+  bc:	4b4b4f4b 	c2	0x14b4f4b
+  c0:	4c834f4b 	0x4c834f4b
+  c4:	504e4b83 	beql	v0,t6,12ed4 <__isr_vec_space+0x12eb4>
+  c8:	0004024b 	0x4024b
+  cc:	00490101 	0x490101
+  d0:	00020000 	sll	zero,v0,0x0
+  d4:	00000023 	negu	zero,zero
+  d8:	0efb0101 	jal	bec0404 <__memory_size+0xbea0c04>
+  dc:	0101000d 	break	0x101
+  e0:	00000101 	0x101
+  e4:	00000100 	sll	zero,zero,0x4
+  e8:	78650001 	bmnzi.b	$w0,$w0,0x65
+  ec:	74706563 	jalx	1c1958c <__memory_size+0x1bf9d8c>
+  f0:	736e6f69 	0x736e6f69
+  f4:	0000532e 	0x532e
+  f8:	00000000 	nop
+  fc:	00000205 	0x205
+ 100:	2c038000 	sltiu	v1,zero,-32768
+ 104:	02838301 	0x2838301
+ 108:	83831770 	lb	v1,6000(gp)
+ 10c:	83177002 	lb	s7,28674(t8)
+ 110:	17700283 	bne	k1,s0,b20 <__isr_vec_space+0xb00>
+ 114:	08028383 	j	a0e0c <__memory_size+0x8160c>
+ 118:	33010100 	andi	at,t8,0x100
+ 11c:	02000000 	0x2000000
+ 120:	00001e00 	sll	v1,zero,0x18
+ 124:	fb010100 	sdc2	$1,256(t8)
+ 128:	01000d0e 	0x1000d0e
+ 12c:	00010101 	0x10101
+ 130:	00010000 	sll	zero,at,0x0
+ 134:	64000100 	0x64000100
+ 138:	796d6d75 	0x796d6d75
+ 13c:	0000532e 	0x532e
+ 140:	00000000 	nop
+ 144:	02000205 	0x2000205
+ 148:	3a038000 	xori	v1,s0,0x8000
+ 14c:	00040201 	0x40201
+ 150:	01810101 	0x1810101
+ 154:	00020000 	sll	zero,v0,0x0
+ 158:	00000078 	0x78
+ 15c:	0efb0101 	jal	bec0404 <__memory_size+0xbea0c04>
+ 160:	0101000d 	break	0x101
+ 164:	00000101 	0x101
+ 168:	00000100 	sll	zero,zero,0x4
+ 16c:	5c3a6301 	0x5c3a6301
+ 170:	676f7270 	0x676f7270
+ 174:	317e6172 	andi	s8,t3,0x6172
+ 178:	616d695c 	0x616d695c
+ 17c:	7e6e6967 	0x7e6e6967
+ 180:	6f745c31 	0x6f745c31
+ 184:	68636c6f 	0x68636c6f
+ 188:	6d5c317e 	0x6d5c317e
+ 18c:	2d737069 	sltiu	s3,t3,28777
+ 190:	2d69746d 	sltiu	t1,t3,29805
+ 194:	5c666c65 	0x5c666c65
+ 198:	36313032 	ori	s1,s1,0x3032
+ 19c:	2d35302e 	sltiu	s5,t1,12334
+ 1a0:	6d5c3330 	0x6d5c3330
+ 1a4:	2d737069 	sltiu	s3,t3,28777
+ 1a8:	2d69746d 	sltiu	t1,t3,29805
+ 1ac:	5c666c65 	0x5c666c65
+ 1b0:	6c636e69 	0x6c636e69
+ 1b4:	5c656475 	0x5c656475
+ 1b8:	7370696d 	s16sdi	xr5,k1,52,
+ 1bc:	616d0000 	0x616d0000
+ 1c0:	632e6e69 	0x632e6e69
+ 1c4:	00000000 	nop
+ 1c8:	6332336d 	0x6332336d
+ 1cc:	00682e30 	tge	v1,t0,0xb8
+ 1d0:	00000001 	movf	zero,zero,$fcc0
+ 1d4:	04020500 	bltzl	zero,15d8 <__isr_vec_space+0x15b8>
+ 1d8:	03800002 	0x3800002
+ 1dc:	bbf8012b 	swr	t8,299(ra)
+ 1e0:	03040200 	0x3040200
+ 1e4:	040200bb 	bltzl	zero,4d4 <__isr_vec_space+0x4b4>
+ 1e8:	13280203 	beq	t9,t0,9f8 <__isr_vec_space+0x9d8>
+ 1ec:	03040200 	0x3040200
+ 1f0:	00132802 	srl	a1,s3,0x0
+ 1f4:	02030402 	0x2030402
+ 1f8:	02000f28 	0x2000f28
+ 1fc:	ba060104 	swr	a2,260(s0)
+ 200:	02040200 	0x2040200
+ 204:	0200f106 	0x200f106
+ 208:	ba060104 	swr	a2,260(s0)
+ 20c:	f20a0306 	0xf20a0306
+ 210:	24020e03 	li	v0,3587
+ 214:	14280201 	bne	at,t0,a1c <__isr_vec_space+0x9fc>
+ 218:	004bbbbb 	0x4bbbbb
+ 21c:	bb030402 	swr	v1,1026(t8)
+ 220:	03040200 	0x3040200
+ 224:	00115c02 	srl	t3,s1,0x10
+ 228:	06010402 	bgez	s0,1234 <__isr_vec_space+0x1214>
+ 22c:	040200ba 	bltzl	zero,518 <__isr_vec_space+0x4f8>
+ 230:	00f50602 	0xf50602
+ 234:	02020402 	0x2020402
+ 238:	02000d28 	0x2000d28
+ 23c:	ba060104 	swr	a2,260(s0)
+ 240:	02040200 	0x2040200
+ 244:	0200f106 	0x200f106
+ 248:	ba060104 	swr	a2,260(s0)
+ 24c:	f20b0306 	0xf20b0306
+ 250:	02184002 	0x2184002
+ 254:	84f31434 	lh	s3,5172(a3)
+ 258:	240285f3 	li	v0,-31245
+ 25c:	02008513 	0x2008513
+ 260:	08060104 	j	180410 <__memory_size+0x160c10>
+ 264:	040200e4 	bltzl	zero,5f8 <__isr_vec_space+0x5d8>
+ 268:	122c0202 	beq	s1,t4,a74 <__isr_vec_space+0xa54>
+ 26c:	04040200 	0x4040200
+ 270:	0402004a 	bltzl	zero,39c <__isr_vec_space+0x37c>
+ 274:	85bb0604 	lh	k1,1540(t5)
+ 278:	01040200 	0x1040200
+ 27c:	00ac0806 	srlv	at,t4,a1
+ 280:	02020402 	0x2020402
+ 284:	0200122c 	0x200122c
+ 288:	004a0404 	0x4a0404
+ 28c:	06040402 	0x6040402
+ 290:	ad0885bb 	sw	t0,-31301(t0)
+ 294:	f489bc84 	sdc1	$f9,-17276(a0)
+ 298:	02004d4b 	0x2004d4b
+ 29c:	00bb0404 	0xbb0404
+ 2a0:	02040402 	0x2040402
+ 2a4:	0200132c 	0x200132c
+ 2a8:	e5080404 	swc1	$f8,1028(t0)
+ 2ac:	04040200 	0x4040200
+ 2b0:	0200ad08 	0x200ad08
+ 2b4:	a8080404 	swl	t0,1028(zero)
+ 2b8:	01040200 	0x1040200
+ 2bc:	0200ba06 	0x200ba06
+ 2c0:	06ba0304 	0x6ba0304
+ 2c4:	3e08f3f9 	0x3e08f3f9
+ 2c8:	0840084b 	j	100212c <__memory_size+0xfe292c>
+ 2cc:	0402003d 	bltzl	zero,3c4 <__isr_vec_space+0x3a4>
+ 2d0:	0802bb01 	j	aec04 <__memory_size+0x8f404>
+ 2d4:	Address 0x00000000000002d4 is out of bounds.
+
+
+Disassembly of section .debug_frame:
+
+00000000 <.debug_frame>:
+   0:	0000000c 	syscall
+   4:	ffffffff 	sdc3	$31,-1(ra)
+   8:	7c010001 	0x7c010001
+   c:	001d0d1f 	0x1d0d1f
+  10:	00000018 	mult	zero,zero
+  14:	00000000 	nop
+  18:	80000204 	lb	zero,516(zero)
+  1c:	000003f0 	tge	zero,zero,0xf
+  20:	48300e44 	0x48300e44
+  24:	029e019f 	0x29e019f
+  28:	001e0d44 	0x1e0d44
+  2c:	00000020 	add	zero,zero,zero
+  30:	00000000 	nop
+  34:	800005f4 	lb	zero,1524(zero)
+  38:	0000010c 	syscall	0x4
+  3c:	44180e44 	0x44180e44
+  40:	0d44019e 	jal	5100678 <__memory_size+0x50e0e78>
+  44:	0df0021e 	jal	7c00878 <__memory_size+0x7be1078>
+  48:	0ede481d 	jal	b792074 <__memory_size+0xb772874>
+  4c:	00000000 	nop
+  50:	00000018 	mult	zero,zero
+  54:	00000000 	nop
+  58:	80000700 	lb	zero,1792(zero)
+  5c:	00000028 	0x28
+  60:	44080e44 	0x44080e44
+  64:	0d44019e 	jal	5100678 <__memory_size+0x50e0e78>
+  68:	0000001e 	0x1e
+
+Disassembly of section .debug_str:
+
+00000000 <.debug_str>:
+   0:	69676964 	0x69676964
+   4:	4e470074 	c3	0x470074
+   8:	20432055 	addi	v1,v0,8277
+   c:	2e392e34 	sltiu	t9,s1,11828
+  10:	6d2d2032 	0x6d2d2032
+  14:	2d206c65 	sltiu	zero,t1,27749
+  18:	6372616d 	0x6372616d
+  1c:	316d3d68 	andi	t5,t3,0x3d68
+  20:	20636b34 	addi	v1,v1,27444
+  24:	6f736d2d 	0x6f736d2d
+  28:	662d7466 	0x662d7466
+  2c:	74616f6c 	jalx	185bdb0 <__memory_size+0x183c5b0>
+  30:	706d2d20 	0x706d2d20
+  34:	2d20746c 	sltiu	zero,t1,29804
+  38:	7370696d 	s16sdi	xr5,k1,52,
+  3c:	32723233 	andi	s2,s3,0x3233
+  40:	736d2d20 	0x736d2d20
+  44:	69636e79 	0x69636e79
+  48:	616d2d20 	0x616d2d20
+  4c:	333d6962 	andi	sp,t9,0x6962
+  50:	672d2032 	0x672d2032
+  54:	65766500 	0x65766500
+  58:	0032746e 	0x32746e
+  5c:	6e69616d 	0x6e69616d
+  60:	7400632e 	jalx	18cb8 <__isr_vec_space+0x18c98>
+  64:	5f747365 	0x5f747365
+  68:	75736572 	jalx	5cd95c8 <__memory_size+0x5cb9dc8>
+  6c:	745f746c 	jalx	17dd1b0 <__memory_size+0x17bd9b0>
+  70:	65766500 	0x65766500
+  74:	0031746e 	0x31746e
+  78:	676e6f6c 	0x676e6f6c
+  7c:	6e6f6c20 	0x6e6f6c20
+  80:	6e752067 	0x6e752067
+  84:	6e676973 	0x6e676973
+  88:	69206465 	0x69206465
+  8c:	7200746e 	0x7200746e
+  90:	32336765 	andi	s3,s1,0x6765
+  94:	6500745f 	0x6500745f
+  98:	6769446e 	0x6769446e
+  9c:	00737469 	0x737469
+  a0:	6e69616d 	0x6e69616d
+  a4:	6c6c6100 	0x6c6c6100
+  a8:	69676944 	0x69676944
+  ac:	5f007374 	bgtzl	t8,1ce80 <__isr_vec_space+0x1ce60>
+  b0:	7370696d 	s16sdi	xr5,k1,52,
+  b4:	6e61685f 	0x6e61685f
+  b8:	5f656c64 	0x5f656c64
+  bc:	65637865 	0x65637865
+  c0:	6f697470 	0x6f697470
+  c4:	3a43006e 	xori	v1,s2,0x6e
+  c8:	6573555c 	0x6573555c
+  cc:	445c7372 	0x445c7372
+  d0:	5c696e61 	0x5c696e61
+  d4:	6b736544 	0x6b736544
+  d8:	5c706f74 	0x5c706f74
+  dc:	756d6953 	jalx	5b5a54c <__memory_size+0x5b3ad4c>
+  e0:	6974616c 	0x6974616c
+  e4:	6f536e6f 	0x6f536e6f
+  e8:	65637275 	0x65637275
+  ec:	61425f73 	0x61425f73
+  f0:	696c6573 	0x696c6573
+  f4:	7700656e 	jalx	c0195b8 <__memory_size+0xbff9db8>
+  f8:	65746972 	0x65746972
+  fc:	546c6156 	bnel	v1,t4,18658 <__isr_vec_space+0x18638>
+ 100:	6553376f 	0x6553376f
+ 104:	74007367 	jalx	1cd9c <__isr_vec_space+0x1cd7c>
+ 108:	5f747365 	0x5f747365
+ 10c:	75736572 	jalx	5cd95c8 <__memory_size+0x5cb9dc8>
+ 110:	7300746c 	s16ldi	xr1,t8,58,ptn0
+ 114:	74657a69 	jalx	195e9a4 <__memory_size+0x193f1a4>
+ 118:	00657079 	0x657079
+ 11c:	73616572 	0x73616572
+ 120:	Address 0x0000000000000120 is out of bounds.
+
+
+Disassembly of section .pdr:
+
+00000000 <.pdr>:
+   0:	9fc00144 	0x9fc00144
+	...
+  20:	9fc00000 	0x9fc00000
+	...
+  40:	80000000 	lb	zero,0(zero)
+	...
+  60:	80000200 	lb	zero,512(zero)
+	...
+  80:	80000200 	lb	zero,512(zero)
+	...
+  a0:	80000200 	lb	zero,512(zero)
+	...
+  c0:	80000200 	lb	zero,512(zero)
+	...
+  e0:	80000200 	lb	zero,512(zero)
+	...
+ 100:	80000204 	lb	zero,516(zero)
+ 104:	c0000000 	ll	zero,0(zero)
+ 108:	fffffffc 	sdc3	$31,-4(ra)
+	...
+ 114:	00000030 	tge	zero,zero
+ 118:	0000001e 	0x1e
+ 11c:	0000001f 	0x1f
+ 120:	800005f4 	lb	zero,1524(zero)
+ 124:	40000000 	mfc0	zero,c0_index
+ 128:	fffffffc 	sdc3	$31,-4(ra)
+	...
+ 134:	00000018 	mult	zero,zero
+ 138:	0000001e 	0x1e
+ 13c:	0000001f 	0x1f
+ 140:	80000700 	lb	zero,1792(zero)
+ 144:	40000000 	mfc0	zero,c0_index
+ 148:	fffffffc 	sdc3	$31,-4(ra)
+	...
+ 154:	00000008 	jr	zero
+ 158:	0000001e 	0x1e
+ 15c:	0000001f 	0x1f
+
+Disassembly of section .gnu.attributes:
+
+00000000 <.gnu.attributes>:
+   0:	00000f41 	0xf41
+   4:	756e6700 	jalx	5b99c00 <__memory_size+0x5b7a400>
+   8:	00070100 	sll	zero,a3,0x4
+   c:	03040000 	0x3040000
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	3a434347 	xori	v1,s2,0x4347
+   4:	6f432820 	0x6f432820
+   8:	63736564 	0x63736564
+   c:	20657061 	addi	a1,v1,28769
+  10:	20554e47 	addi	s5,v0,20039
+  14:	6c6f6f54 	0x6c6f6f54
+  18:	30322073 	andi	s2,at,0x2073
+  1c:	302e3631 	andi	t6,at,0x3631
+  20:	33302d35 	andi	s0,t9,0x2d35
+  24:	726f6620 	0x726f6620
+  28:	50494d20 	beql	v0,t1,134ac <__isr_vec_space+0x1348c>
+  2c:	544d2053 	bnel	v0,t5,817c <__isr_vec_space+0x815c>
+  30:	61422049 	0x61422049
+  34:	4d206572 	0x4d206572
+  38:	6c617465 	0x6c617465
+  3c:	2e342029 	sltiu	s4,s1,8233
+  40:	00322e39 	0x322e39

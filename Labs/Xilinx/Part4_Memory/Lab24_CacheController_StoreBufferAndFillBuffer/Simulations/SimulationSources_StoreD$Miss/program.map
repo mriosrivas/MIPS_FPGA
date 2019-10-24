@@ -1,0 +1,349 @@
+
+Discarded input sections
+
+ .reginfo       0x0000000000000000       0x18 boot.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 boot.o
+ .reginfo       0x0000000000000000       0x18 exceptions.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 exceptions.o
+ .reginfo       0x0000000000000000       0x18 dummy.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 dummy.o
+ .reginfo       0x0000000000000000       0x18 main.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD crt0.o
+                0x0000000080040000                __stack = 0x80040000
+                0x000000000001f800                __memory_size = 0x1f800
+                0x00000000bfc00000                __flash_start = 0xbfc00000
+                0x0000000080000000                __flash_app_start = 0x80000000
+                0x0000000080000000                __app_start = 0x80000000
+                0x0000000000000000                __isr_vec_count = 0x0
+LOAD boot.o
+LOAD exceptions.o
+LOAD dummy.o
+LOAD main.o
+LOAD C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2016.05-03/share/mips/addons/libfdc/\libfdc.a
+LOAD c:/progra~1/imagin~1/toolch~1/mips-mti-elf/2016.05-03/bin/../lib/gcc/mips-mti-elf/4.9.2/mipsel-r2-soft-newlib/lib\libgcc.a
+LOAD c:/progra~1/imagin~1/toolch~1/mips-mti-elf/2016.05-03/bin/../lib/gcc/mips-mti-elf/4.9.2/mipsel-r2-soft-newlib/lib\libgcc.a
+                0x00000000bfc00000                __entry = DEFINED (__reset_vector)?0xbfc00000:_start
+START GROUP
+LOAD c:/progra~1/imagin~1/toolch~1/mips-mti-elf/2016.05-03/bin/../lib/gcc/mips-mti-elf/4.9.2/../../../../mips-mti-elf/lib/mipsel-r2-soft-newlib/lib\libc.a
+LOAD c:/progra~1/imagin~1/toolch~1/mips-mti-elf/2016.05-03/bin/../lib/gcc/mips-mti-elf/4.9.2/../../../../mips-mti-elf/lib/mipsel-r2-soft-newlib/lib\libuhi.a
+LOAD c:/progra~1/imagin~1/toolch~1/mips-mti-elf/2016.05-03/bin/../lib/gcc/mips-mti-elf/4.9.2/mipsel-r2-soft-newlib/lib\libgcc.a
+LOAD c:/progra~1/imagin~1/toolch~1/mips-mti-elf/2016.05-03/bin/../lib/gcc/mips-mti-elf/4.9.2/../../../../mips-mti-elf/lib/mipsel-r2-soft-newlib/lib\libhal.a
+END GROUP
+                0x0000000000000000                __DYNAMIC = 0x0
+                0x0000000000000000                PROVIDE (__stack, 0x0)
+                0x0000000000300000                PROVIDE (__memory_size, 0x300000)
+                0x0000000080000000                PROVIDE (__memory_base, 0x80000000)
+                0x0000000000000001                PROVIDE (__tlb_stride_length, 0x1)
+                0x0000000000000000                PROVIDE (__enable_xpa, 0x0)
+                0x0000000000000001                PROVIDE (__use_excpt_boot, 0x1)
+                0x0000000000000001                ASSERT ((DEFINED (__register_excpt_boot) || (__use_excpt_boot == 0x0)), Registration for boot context is required for UHI chaining)
+                0x0000000000000001                PROVIDE (__flush_to_zero, 0x1)
+                0x0000000080000200                PROVIDE (__exception_handle, DEFINED (__exception_handle_quiet)?__exception_handle_quiet:__exception_handle_verbose)
+                0x0000000080000200                PROVIDE (_mips_handle_exception, __exception_handle)
+                0x0000000000000000                PROVIDE (hardware_exit_hook, 0x0)
+                0x0000000000000000                PROVIDE (hardware_hazard_hook, 0x0)
+                0x0000000000000000                PROVIDE (hardware_init_hook, 0x0)
+                0x0000000000000000                PROVIDE (software_init_hook, 0x0)
+                0x0000000080000000                PROVIDE (__app_start, DEFINED (__reset_vector)?0x80000000:0x80200000)
+                0x0000000000000020                PROVIDE (__isr_vec_space, 0x20)
+                0x0000000000000009                PROVIDE (__isr_vec_count, 0x9)
+                0x00000000bfc00000                PROVIDE (__flash_start, DEFINED (__reset_vector)?0xbfc00000:__app_start)
+
+.bootrom        0x000000009fc00000      0x1b0 load address 0x00000000bfc00000
+ *(.reset)
+ .reset         0x000000009fc00000      0x144 boot.o
+                0x000000009fc00000                __reset_vector
+ *(.boot)
+ .boot          0x000000009fc00144       0x6c crt0.o
+                0x000000009fc00144                _start
+                0x000000009fc001b0                . = ALIGN (0x8)
+                0x00000000bfc001b0                PROVIDE (__flash_app_start, (SIZEOF (.bootrom) + __flash_start))
+
+.exception_vector
+                0x0000000080000000      0x200
+                0x0000000080000000                __excpt_ebase = ABSOLUTE (.)
+                0x0000000080000000                __base = .
+ *(.text.__exception_entry)
+ .text.__exception_entry
+                0x0000000080000000      0x198 exceptions.o
+                0x0000000080000000                __exception_entry
+                0x0000000080000200                . = (__base + 0x200)
+ *fill*         0x0000000080000198       0x68 00000000
+ *(SORT(.text.__isr_vec*))
+                0x0000000080000200                . = ((__base + 0x200) + (__isr_vec_space * __isr_vec_count))
+                0x0000000000000001                ASSERT ((__isr_vec_space == DEFINED (__isr_vec_sw0)?(__isr_vec_sw1 - __isr_vec_sw0):__isr_vec_space), Actual ISR vector spacing does not match __isr_vec_space)
+                0x0000000000000001                ASSERT (((__base + 0x200) == DEFINED (__isr_vec_sw0)?(__isr_vec_sw0 & 0xfffffffe):(__base + 0x200)), __isr_vec_sw0 is not placed at EBASE + 0x200)
+                0x0000000080000200                . = ALIGN (0x8)
+
+.text           0x0000000080000200       0x44
+                0x0000000080000200                _ftext = .
+                0x0000000080000200                PROVIDE (eprol, .)
+ *(.text)
+ .text          0x0000000080000200        0x0 crt0.o
+ .text          0x0000000080000200        0x0 boot.o
+ .text          0x0000000080000200        0x0 exceptions.o
+ .text          0x0000000080000200        0x4 dummy.o
+                0x0000000080000200                __register_excpt_boot
+                0x0000000080000200                __register_excpt_handler
+                0x0000000080000200                __getargs
+                0x0000000080000200                __isr_vec
+                0x0000000080000200                __exception_handle_verbose
+ .text          0x0000000080000204       0x40 main.o
+                0x0000000080000204                main
+ *(.text.*)
+ *(.gnu.linkonce.t.*)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+
+.init
+ *(.init)
+
+.fini
+ *(.fini)
+
+.rel.sdata      0x0000000080000244        0x0
+                0x0000000080000244                PROVIDE (__runtime_reloc_start, .)
+ *(.rel.sdata)
+                0x0000000080000244                PROVIDE (__runtime_reloc_stop, .)
+                0x0000000080000244                PROVIDE (etext, .)
+                0x0000000080000244                _etext = .
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.jcr
+ *(.jcr)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x0000000080000244                . = .
+
+.MIPS.abiflags  0x0000000080000248       0x18
+                0x0000000080000248                __MIPS_abiflags_start = .
+ *(.MIPS.abiflags)
+ .MIPS.abiflags
+                0x0000000080000248       0x18 crt0.o
+                0x0000000080000260                __MIPS_abiflags_end = .
+
+.rodata
+ *(.rdata)
+ *(.rodata)
+ *(.rodata.*)
+ *(.gnu.linkonce.r.*)
+                0x0000000080000260                . = ALIGN (0x10)
+                0x0000000080000260                _fdata = .
+
+.data           0x0000000080000260       0x30
+ *(.data)
+ .data          0x0000000080000260        0x0 crt0.o
+ .data          0x0000000080000260        0x0 boot.o
+ .data          0x0000000080000260        0x0 exceptions.o
+ .data          0x0000000080000260        0x0 dummy.o
+ .data          0x0000000080000260       0x30 main.o
+                0x0000000080000260                test_data
+ *(.data.*)
+ *(.gnu.linkonce.d.*)
+                0x0000000080000290                . = ALIGN (0x8)
+                0x0000000080008290                _gp = (. + 0x8000)
+                0x0000000080008290                __global = _gp
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+
+.sdata
+ *(.sdata)
+ *(.sdata.*)
+ *(.gnu.linkonce.s.*)
+                0x0000000080000290                . = ALIGN (0x4)
+                0x0000000080000290                PROVIDE (edata, .)
+                0x0000000080000290                _edata = .
+                0x0000000080000290                _fbss = .
+
+.sbss
+ *(.sbss)
+ *(.sbss.*)
+ *(.gnu.linkonce.sb.*)
+ *(.scommon)
+
+.bss            0x0000000080000290        0x0
+                0x0000000080000290                _bss_start = .
+ *(.bss)
+ .bss           0x0000000080000290        0x0 crt0.o
+ .bss           0x0000000080000290        0x0 boot.o
+ .bss           0x0000000080000290        0x0 exceptions.o
+ .bss           0x0000000080000290        0x0 dummy.o
+ .bss           0x0000000080000290        0x0 main.o
+ *(.bss.*)
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+                0x0000000080000290                . = ALIGN (0x4)
+                0x0000000080000290                PROVIDE (end, .)
+                0x0000000080000290                _end = .
+
+.startdata
+ *(.startdata)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0xa0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 crt0.o
+ .debug_aranges
+                0x0000000000000020       0x20 boot.o
+ .debug_aranges
+                0x0000000000000040       0x20 exceptions.o
+ .debug_aranges
+                0x0000000000000060       0x20 dummy.o
+ .debug_aranges
+                0x0000000000000080       0x20 main.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000      0x201
+ *(.debug_info)
+ .debug_info    0x0000000000000000       0x64 crt0.o
+ .debug_info    0x0000000000000064       0x64 boot.o
+ .debug_info    0x00000000000000c8       0x6a exceptions.o
+ .debug_info    0x0000000000000132       0x65 dummy.o
+ .debug_info    0x0000000000000197       0x6a main.o
+
+.debug_abbrev   0x0000000000000000       0xb5
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x14 crt0.o
+ .debug_abbrev  0x0000000000000014       0x14 boot.o
+ .debug_abbrev  0x0000000000000028       0x14 exceptions.o
+ .debug_abbrev  0x000000000000003c       0x14 dummy.o
+ .debug_abbrev  0x0000000000000050       0x65 main.o
+
+.debug_line     0x0000000000000000      0x18c
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x48 crt0.o
+ .debug_line    0x0000000000000048       0x86 boot.o
+ .debug_line    0x00000000000000ce       0x4d exceptions.o
+ .debug_line    0x000000000000011b       0x37 dummy.o
+ .debug_line    0x0000000000000152       0x3a main.o
+
+.debug_frame    0x0000000000000000       0x20
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x20 main.o
+
+.debug_str      0x0000000000000000       0xa6
+ *(.debug_str)
+ .debug_str     0x0000000000000000       0xa6 main.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.mdebug.abi32   0x0000000000000000        0x0
+ *(.mdebug.abi32)
+ .mdebug.abi32  0x0000000000000000        0x0 main.o
+
+.mdebug.abiN32
+ *(.mdebug.abiN32)
+
+.mdebug.abi64
+ *(.mdebug.abi64)
+
+.mdebug.abiO64
+ *(.mdebug.abiO64)
+
+.mdebug.eabi32
+ *(.mdebug.eabi32)
+
+.mdebug.eabi64
+ *(.mdebug.eabi64)
+
+.gcc_compiled_long32
+ *(.gcc_compiled_long32)
+
+.gcc_compiled_long64
+ *(.gcc_compiled_long64)
+OUTPUT(program.elf elf32-tradlittlemips)
+
+.reginfo        0x0000000000000000       0x18
+ .reginfo       0x0000000000000000       0x18 crt0.o
+
+.pdr            0x0000000000000000      0x120
+ .pdr           0x0000000000000000       0x20 crt0.o
+ .pdr           0x0000000000000020       0x20 boot.o
+ .pdr           0x0000000000000040       0x20 exceptions.o
+ .pdr           0x0000000000000060       0xa0 dummy.o
+ .pdr           0x0000000000000100       0x20 main.o
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ .gnu.attributes
+                0x0000000000000000       0x10 crt0.o
+ .gnu.attributes
+                0x0000000000000010       0x10 boot.o
+ .gnu.attributes
+                0x0000000000000020       0x10 exceptions.o
+ .gnu.attributes
+                0x0000000000000030       0x10 dummy.o
+ .gnu.attributes
+                0x0000000000000040       0x10 main.o
+
+.comment        0x0000000000000000       0x44
+ .comment       0x0000000000000000       0x44 main.o
+                                         0x45 (size before relaxing)

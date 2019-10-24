@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_boot_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench_boot" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="9" />
+   <wave_markers>
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+   </wave_markers>
+   <wvobject db_ref_id="1" fp_name="/testbench_boot/SI_ClkIn" type="logic">
+      <obj_property name="ElementShortName">SI_ClkIn</obj_property>
+      <obj_property name="ObjectShortName">SI_ClkIn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/edp/edp_iva_i" type="array">
+      <obj_property name="ElementShortName">edp_iva_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">edp_iva_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/icc/icc_idata_i" type="array">
+      <obj_property name="ElementShortName">icc_idata_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">icc_idata_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/mpc/mpc_ir_e" type="array">
+      <obj_property name="ElementShortName">mpc_ir_e[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mpc_ir_e[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="group27" type="group">
+      <obj_property name="label">Load-Adder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/edp/aop_e" type="array">
+         <obj_property name="ElementShortName">aop_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">aop_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/edp/dva_offset_e" type="array">
+         <obj_property name="ElementShortName">dva_offset_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dva_offset_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/edp/edp_dva_e" type="array">
+         <obj_property name="ElementShortName">edp_dva_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">edp_dva_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group100" type="group">
+      <obj_property name="label">D$-ReadSignals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/dcache/data_rd_str" type="logic">
+         <obj_property name="ElementShortName">data_rd_str</obj_property>
+         <obj_property name="ObjectShortName">data_rd_str</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/dcache/data_addr" type="array">
+         <obj_property name="ElementShortName">data_addr[13:2]</obj_property>
+         <obj_property name="ObjectShortName">data_addr[13:2]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/dcache/rd_data" type="array">
+         <obj_property name="ElementShortName">rd_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_data[63:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group105" type="group">
+      <obj_property name="label">D$-Compare</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/dcc/tagcmp/tag_cmp_data" type="array">
+         <obj_property name="ElementShortName">tag_cmp_data[21:0]</obj_property>
+         <obj_property name="ObjectShortName">tag_cmp_data[21:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/dcc/tagcmp/tag_cmp_pa" type="array">
+         <obj_property name="ElementShortName">tag_cmp_pa[43:0]</obj_property>
+         <obj_property name="ObjectShortName">tag_cmp_pa[43:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/dcc/tagcmp/cachehit" type="logic">
+         <obj_property name="ElementShortName">cachehit</obj_property>
+         <obj_property name="ObjectShortName">cachehit</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group108" type="group">
+      <obj_property name="label">D$-Datamux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/dcc/datamux/data_in" type="array">
+         <obj_property name="ElementShortName">data_in[63:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[63:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/dcc/datamux/data_out" type="array">
+         <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/dcc/dcc_ddata_m" type="array">
+         <obj_property name="ElementShortName">dcc_ddata_m[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dcc_ddata_m[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group111" type="group">
+      <obj_property name="label">LoadAlign</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" fp_name="/testbench_boot/sys/top/cpu/core/edp/edp_ldcpdata_w" type="array">
+         <obj_property name="ElementShortName">edp_ldcpdata_w[31:0]</obj_property>
+         <obj_property name="ObjectShortName">edp_ldcpdata_w[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

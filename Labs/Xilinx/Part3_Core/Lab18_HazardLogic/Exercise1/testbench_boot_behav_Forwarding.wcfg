@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_boot_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench_boot" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="99923125000fs"></ZoomStartTime>
+      <ZoomEndTime time="99972475001fs"></ZoomEndTime>
+      <Cursor1Time time="100000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="8" />
+   <wave_markers>
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+      <marker time="2147483647" label="" />
+   </wave_markers>
+   <wvobject fp_name="/testbench_boot/SI_ClkIn" type="logic">
+      <obj_property name="ElementShortName">SI_ClkIn</obj_property>
+      <obj_property name="ObjectShortName">SI_ClkIn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/edp_iva_i" type="array">
+      <obj_property name="ElementShortName">edp_iva_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">edp_iva_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/icc/icc_idata_i" type="array">
+      <obj_property name="ElementShortName">icc_idata_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">icc_idata_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_boot/sys/top/cpu/core/mpc/mpc_ir_e" type="array">
+      <obj_property name="ElementShortName">mpc_ir_e[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mpc_ir_e[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="group22" type="group">
+      <obj_property name="label">BypassControlSignals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/mpc_aselres_e" type="logic">
+         <obj_property name="ElementShortName">mpc_aselres_e</obj_property>
+         <obj_property name="ObjectShortName">mpc_aselres_e</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/mpc_bselres_e" type="logic">
+         <obj_property name="ElementShortName">mpc_bselres_e</obj_property>
+         <obj_property name="ObjectShortName">mpc_bselres_e</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/mpc/mpc_aselwr_e" type="logic">
+         <obj_property name="ElementShortName">mpc_aselwr_e</obj_property>
+         <obj_property name="ObjectShortName">mpc_aselwr_e</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/mpc/mpc_bselall_e" type="logic">
+         <obj_property name="ElementShortName">mpc_bselall_e</obj_property>
+         <obj_property name="ObjectShortName">mpc_bselall_e</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/mpc_run_ie" type="logic">
+         <obj_property name="ElementShortName">mpc_run_ie</obj_property>
+         <obj_property name="ObjectShortName">mpc_run_ie</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group41" type="group">
+      <obj_property name="label">AdderSources_RF-Bypass</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/rf/rf_adt_e" type="array">
+         <obj_property name="ElementShortName">rf_adt_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_adt_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/preabus_e" type="array">
+         <obj_property name="ElementShortName">preabus_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">preabus_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/rf/rf_bdt_e" type="array">
+         <obj_property name="ElementShortName">rf_bdt_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_bdt_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/prebbus_e" type="array">
+         <obj_property name="ElementShortName">prebbus_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">prebbus_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group35" type="group">
+      <obj_property name="label">Adder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/aop_e" type="array">
+         <obj_property name="ElementShortName">aop_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">aop_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/bop_e" type="array">
+         <obj_property name="ElementShortName">bop_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bop_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/adder_res_e" type="array">
+         <obj_property name="ElementShortName">adder_res_e[31:0]</obj_property>
+         <obj_property name="ObjectShortName">adder_res_e[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group38" type="group">
+      <obj_property name="label">AdderResult_M-A</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/res_m" type="array">
+         <obj_property name="ElementShortName">res_m[31:0]</obj_property>
+         <obj_property name="ObjectShortName">res_m[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench_boot/sys/top/cpu/core/edp/edp_wrdata_w" type="array">
+         <obj_property name="ElementShortName">edp_wrdata_w[31:0]</obj_property>
+         <obj_property name="ObjectShortName">edp_wrdata_w[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
