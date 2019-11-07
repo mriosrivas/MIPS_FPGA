@@ -1,4 +1,4 @@
-file="temp/Codescape.GNU.Tools.Package.2019.09-01.for.MIPS.MTI.Bare.Metal.CentOS-5.x86_64.tar.gz"
+file="temp/Codescape.GNU.Tools.Package.2019.09-01.for.MIPS.MTI.Bare.Metal.CentOS-6.x86_64.tar.gz"
 if [ -f "$file" ]
 then
 	echo "$file found."
@@ -12,14 +12,14 @@ else
     cd temp
 
     #Get Codescape toolchain Bare Metal
-    wget 'https://codescape.mips.com/components/toolchain/2019.09-01/Codescape.GNU.Tools.Package.2019.09-01.for.MIPS.MTI.Bare.Metal.CentOS-5.x86_64.tar.gz'
+	wget 'https://codescape.mips.com/components/toolchain/2019.09-01/Codescape.GNU.Tools.Package.2019.09-01.for.MIPS.MTI.Bare.Metal.CentOS-6.x86_64.tar.gz'
     sudo mkdir /opt/imgtec/
-    sudo tar xvzf 'Codescape.GNU.Tools.Package.2019.09-01.for.MIPS.MTI.Bare.Metal.CentOS-5.x86_64.tar.gz' -C /opt/imgtec/
+    sudo tar xvzf 'Codescape.GNU.Tools.Package.2019.09-01.for.MIPS.MTI.Bare.Metal.CentOS-6.x86_64.tar.gz' -C /opt/imgtec/
 	    
 fi
 
 #libfdc Library
-#sudo mkdir /opt/imgtec/mips-mti-elf/2019.09-01/share/mips/addons/
+sudo mkdir /opt/imgtec/mips-mti-elf/2019.09-01/share/mips/addons/
 
 cd ..
 sudo unzip libfdc.zip -d /opt/imgtec/mips-mti-elf/2019.09-01/share/mips/addons/libfdc/
